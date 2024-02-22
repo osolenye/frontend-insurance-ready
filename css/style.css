@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* .container {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    zoom: 100%;
+} */
+
+
+/* navigation menu */
+.navbar {
+    height: 92px;
+    flex-shrink: 0;
+    background: #0B3C32;
+    position: relative;
+}
+
+.logo img{
+    position: absolute;
+    /*width: 216px;*/
+    width: 190px;
+    height: 92px;
+}
+
+.navbar_buttons {
+    position: absolute;
+    list-style-type: none;
+    right: 80px;
+}
+
+.navbar_button {
+    display: inline-block;
+    width: 128px;
+    height: 92px;
+    line-height: 92px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.navbar_button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #EACC76;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;        
+}

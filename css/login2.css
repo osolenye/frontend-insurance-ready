@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.external_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  width: 1360px;
+  height: 656px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: #0b3c32;
+}
+
+.login {
+  background-color: #0b3c32;
+  width: 297px;
+  height: 344px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.login_logo {
+  position: absolute;
+  width: 224px;
+  height: 124px;
+}
+
+.login_form {
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 124px;
+}
+
+.form_field input {
+  width: 240px;
+  height: 36px;
+  border-radius: 15px;
+  margin-top: 10px;
+
+}
+
+.form_field input::placeholder {
+  color: #0b3c32;
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 5px;
+}
+
+.btn {
+  width: 96px;
+  height: 24px;
+  background-color: #eacc76;
+  color: #0b3c32;
+
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+.line {
+  background-color: #ffffff;
+  height: 1px;
+  width: 242px;
+  position: absolute;
+  bottom: 73px;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+
+.registration {
+  position: absolute;
+  top: 276px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.registration a {
+  color: #eacc76;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+}

@@ -1,0 +1,145 @@
+.external_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+}
+
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* top: 100px; */
+    width: 1360px;
+    height: 656px;
+}
+
+.fill_form{
+    width: 1200px;
+    height: auto;
+    border-color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-style: solid;
+    padding: 20px;
+}
+
+.type_info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type_info input{
+    width: 456px;
+    height: 36px;
+    margin-right: 20px;
+
+
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+}
+
+.type_info input::placeholder {
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.type_info a {
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 140px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 12px;
+    
+    background: rgb(234, 204, 118);
+
+    text-decoration: none;
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.forms {
+    float: right;
+    top: 0px;
+}
+
+.forms .type_info{
+    margin: 18px;
+}
+
+
+.fill_info {
+    position: absolute;
+}
+
+
+.btn_save {
+    width: 124px;
+    height: 28px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 12px;
+    
+    background: rgb(234, 204, 118);
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+
+    text-decoration: none;
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.button_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: 0px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+
+.fill_info p{
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}

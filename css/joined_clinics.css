@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+.wrapper_container {
+    width: auto;
+    height: auto;
+}
+
+.wrapper {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+.wrapper > * {
+    margin: 5px;
+}
+
+
+
+.clinics_container {
+    display: flex;
+    justify-content: center;
+}
+
+.clinics {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+
+.headers {
+    display: flex;
+    justify-content: center;
+    width: 1168px;
+}
+
+
+.headers p{
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    
+
+    flex-grow: 1;
+}
+
+
+.line {
+    width: 1168px;
+    border: 2px solid rgb(11, 60, 50);
+}
+
+
+.clinic_info {
+    width: 1168px;
+    height: 56px;
+    background-color: ;
+}

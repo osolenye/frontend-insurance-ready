@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.external_wrapper {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100vw;
+    height: 70vh;
+}
+
+.payment_header {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* top: 50px; */
+    flex-direction: column;
+    width: 1360px;
+    height: 656px;
+    top: 10%;
+}
+
+.block {
+    width: 672px;
+    height: 484px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 10px;
+
+    background: rgb(11, 60, 50);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    flex-direction: column;
+    position: relative;
+}
+
+
+.input_price {
+    width: 616px;
+    height: 36px;
+
+    border-radius: 6px;
+
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    margin-bottom: 8px;
+}
+
+.attach {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.attach input {
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    width: 456px;
+    height: 36px;
+
+    border-radius: 6px;
+
+}
+
+.attach a {
+    width: 140px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 12px;
+
+    background: rgb(234, 204, 118);
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    margin-left: 20px;
+}
+
+
+.input_comment {
+    height: 72px;
+    width: 616px;
+
+
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+
+
+    margin-bottom: 8px;
+}
+
+
+/* Стили для выпадающего меню */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropbtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 36px;
+    width: 136px;
+    border-radius: 6px;
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 136px;
+    height: 56px;
+    border-radius: 6px;
+
+
+
+    background-color: #FFFFFF;
+}
+
+
+.dropdown-content-flex {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: 56px;
+    padding-left: 8px;
+}
+
+.dropdown-content-flex a {
+    text-decoration: none;
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    /* background-color: #2980b9; */
+}
+
+.payment_options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: inherit;
+    position: relative;
+}
+
+.input_card_info {
+    margin-left: 8px;
+    width: 172px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit input {
+    width: 128px;
+    height: 28px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 12px;
+    background: rgb(234, 204, 118);
+
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+    position: relative;
+    top: 5px;
+}
+
+
+.input_patient_name {
+    width: 280px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.patient_inn {
+    width: 280px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 0px 0px 6px 6px;
+    background: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+}
+
+.patient_inn span {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    margin-left: 8px;
+}
+
+.form_patient_search {
+    margin-bottom: 8px;
+}

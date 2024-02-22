@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.external_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 1360px;
+    height: 656px;
+}
+
+.form_field {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10vh;
+}
+
+
+
+.form_field input {
+    width: 568px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 2px solid rgb(11, 60, 50);
+    border-radius: 16px;
+
+    background: rgb(255, 255, 255);
+    position: relative;
+    left: 10vh;
+
+
+    padding-left: 25px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+.form_field input::placeholder {
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.allowed_services {
+    position: relative;
+    width: 768px;
+    height: 216px;
+    left: 96px;
+    top: 100px;
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.pagination_buttons {
+    display: flex;
+    position: absolute;
+}
+
+
+.pagination_buttons li {
+    list-style-type: none;
+}
+
+.pagination_buttons .arrow {
+    margin: 5px;
+
+}
+
+.pagination_button {
+    width: 28px;
+    height: 28px;
+    border-radius: 12px;
+    background: rgb(11, 60, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pagination_number {
+    color: rgb(234, 204, 118);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.pagination_wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}

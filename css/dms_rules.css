@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.external_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 1360px;
+    height: 656px;
+}
+
+.rules_content {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 768px;
+    height: 200px;
+    top: 50px;
+}
+
+.dms_rules {
+    display: block;
+}
+.dms_rules h1 {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.rules_text {
+    display: block;
+    margin: 5px;
+}
+
+.rules_text p {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.vertical_line {
+    position: relative;
+    width: 240px;
+    height: 0;
+    border: 2px solid rgb(11, 60, 50);
+    top: 5vh;
+}
+
+.download_rules {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 176px;
+    height: 28px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 12px;
+    background: rgb(234, 204, 118);
+    top: 8vh;
+}
+.download_rules a {
+    text-decoration: none;
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+}
