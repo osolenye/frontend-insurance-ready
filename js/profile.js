@@ -1,5 +1,5 @@
-var responseUnprocessedContent;
-var responseProcessedContent;
+var responseUnprocessedContent = [];
+var responseProcessedContent = [];
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', function () {
         var w = window.innerWidth;
@@ -150,12 +150,16 @@ document.addEventListener("DOMContentLoaded", function () {
         responseUnprocessed.style.display = "none";
         responseProcessed.style.display = "flex";
 
-        responseUnprocessedContent.forEach(function (element) {
-            element.style.display = "none";
-        });
-        responseProcessedContent.forEach(function (element) {
-            element.style.display = "flex";
-        });
+        if (responseUnprocessedContent.length > 0) {
+            responseUnprocessedContent.forEach(function (element) {
+                element.style.display = "none";
+            });
+        }
+        if (responseProcessed.length > 0) {
+            responseProcessedContent.forEach(function (element) {
+                element.style.display = "flex";
+            });
+        }
 
         processedRequests.style.background = "#0B3C32";
         urlProcessedRequests.style.color = "#EACC76";
@@ -168,12 +172,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         responseProcessed.style.display = "none";
 
-        responseProcessedContent.forEach(function (element) {
-            element.style.display = "none";
-        });
-        responseUnprocessedContent.forEach(function (element) {
-            element.style.display = "flex";
-        })
+        if (responseProcessedContent.length > 0) {
+            responseProcessedContent.forEach(function (element) {
+                element.style.display = "none";
+            });
+        }
+        if (responseUnprocessedContent.length > 0) {
+            responseUnprocessedContent.forEach(function (element) {
+                element.style.display = "flex";
+            })
+        }
 
         responseUnprocessed.style.display = "flex";
 

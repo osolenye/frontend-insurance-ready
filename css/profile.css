@@ -95,6 +95,7 @@ body {
 }
 .request_options {
   margin-top: 20px;
+  display: flex;
 }
 
 
@@ -112,17 +113,17 @@ body {
 
 
 .processed_requests {
-  display: inline-block;
   position: relative;
   width: 176px;
   height: 24px;
-  /* line-height: 24px;  */
-  text-align: center;
   border-radius: 10px 0px 0px 0px;
   border: 1px solid #0b3c32;
   flex-shrink: 0;
   background: #0b3c32;
   margin-right: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .url_processed_requests {
   color: #eacc76;
@@ -135,13 +136,16 @@ body {
 }
 
 .unprocessed_requests {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 188px;
   height: 24px;
   flex-shrink: 0;
   border-radius: 0px 10px 0px 0px;
   border: 1px solid #0b3c32;
   color: #0b3c32;
+
 }
 
 .url_unprocessed_requests {

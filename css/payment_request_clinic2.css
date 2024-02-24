@@ -117,6 +117,38 @@
     margin-left: 20px;
 }
 
+.attach .upload_file {
+    width: 140px;
+    height: 28px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    text-decoration: none;
+
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 12px;
+
+    background: rgb(234, 204, 118);
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+
+    margin-left: 20px;
+
+    line-height: 28px;
+
+    cursor: pointer;
+}
+.attach .upload_file::file-selector-button {
+    display: none;
+}
+
+
 
 .input_comment {
     height: 72px;

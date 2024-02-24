@@ -38,26 +38,30 @@
             <h1 class="payment_header">Онлайн заявка на выплату</h1>
             <div class="block">
                 <form action="" class="form_payment">
-                    <input type="text" name="" id="" placeholder="Стоимость" class="input_price">
+                    <input type="text" name=""  placeholder="Стоимость" class="input_price">
 
                     <div class="attach">
-                        <input type="text" name="" id="" placeholder="Мед. заключения врачей (направления, выписки)"
+                        <input type="text" name="" placeholder="Мед. заключения врачей (направления, выписки)"
                             class="input_attach">
-                        <a href="">Прикрепить</a>
+<!--                        <a href="">Прикрепить</a>-->
+                        <input type="file" class="upload_file" placeholder="Прикрепить">
                     </div>
                     <div class="attach">
-                        <input type="text" name="" id="" placeholder="ККМ чек" class="input_attach">
-                        <a href="">Прикрепить</a>
+                        <input type="text" name="" placeholder="ККМ чек" class="input_attach">
+<!--                        <a href="">Прикрепить</a>-->
+                        <input type="file" class="upload_file" placeholder="Прикрепить">
                     </div>
                     <div class="attach">
-                        <input type="text" name="" id="" placeholder="Счет фактура о проделанной работе"
+                        <input type="text" name="" placeholder="Счет фактура о проделанной работе"
                             class="input_attach">
-                        <a href="">Прикрепить</a>
+<!--                        <a href="">Прикрепить</a>-->
+                        <input type="file" class="upload_file" placeholder="Прикрепить">
                     </div>
                     <div class="attach">
-                        <input type="text" name="" id="" placeholder="Интерпретация анализов (УЗИ, рентген и т.д.)"
+                        <input type="text" name="" placeholder="Интерпретация анализов (УЗИ, рентген и т.д.)"
                             class="input_attach">
-                        <a href="">Прикрепить</a>
+<!--                        <a href="">Прикрепить</a>-->
+                        <input type="file" class="upload_file" placeholder="Прикрепить">
                     </div>
 
 
@@ -71,13 +75,13 @@
                             <button class="dropbtn">Способ оплаты</button>
                             <div class="dropdown-content">
                                 <div class="dropdown-content-flex">
-                                    <a href="#">Наличными</a>
-                                    <a href="#">Перечислением</a>
+                                    <a href="#" id="pay_cash">Наличными</a>
+                                    <a href="#" id="pay_cashless">Перечислением</a>
                                 </div>
                             </div>
                         </div>
 
-                        <input type="text" name="" id="" placeholder="1234 1234 1234 1234" class="input_card_info">
+                        <input type="text" name="" id="input_card_info" placeholder="1234 1234 1234 1234" class="input_card_info">
                     </div>
 
                     <div class="submit">
