@@ -18,7 +18,7 @@
     flex-direction: column;
 }
 
-.fill_form{
+.fill_form {
     width: 1200px;
     height: auto;
     border-color: rgb(0, 0, 0);
@@ -34,7 +34,7 @@
     align-items: center;
 }
 
-.type_info input{
+.type_info input {
     width: 456px;
     height: 36px;
     margin-right: 20px;
@@ -66,7 +66,7 @@
     box-sizing: border-box;
     border: 1px solid rgb(234, 204, 118);
     border-radius: 12px;
-    
+
     background: rgb(234, 204, 118);
 
     text-decoration: none;
@@ -86,7 +86,7 @@
     top: 0px;
 }
 
-.forms .type_info{
+.forms .type_info {
     margin: 18px;
 }
 
@@ -102,7 +102,7 @@
     box-sizing: border-box;
     border: 1px solid rgb(234, 204, 118);
     border-radius: 12px;
-    
+
     background: rgb(234, 204, 118);
 
     display: flex;
@@ -135,7 +135,7 @@
 }
 
 
-.fill_info p{
+.fill_info p {
     color: rgb(11, 60, 50);
     font-family: Ubuntu;
     font-size: 14px;
@@ -144,7 +144,6 @@
     letter-spacing: 0%;
     text-align: left;
 }
-
 
 
 .input_patient_name {

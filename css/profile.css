@@ -1,287 +1,289 @@
 * {
-  margin: 0;
-  padding: 0;
-}
-body {
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.external_container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 90vh;
+body {
+    overflow: hidden;
+}
+
+.external_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
 }
 
 
 .container {
-  position: relative;
-  width: 1360px;
-  height: 656px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    width: 1360px;
+    height: 656px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 
 /* a little info about the user */
 .fill_request {
-  position: relative;
-  width: 468px;
-  height: 96px;
-  border: 1px solid #0b3c32;
-  border-radius: 10px;
+    position: relative;
+    width: 468px;
+    height: 96px;
+    border: 1px solid #0b3c32;
+    border-radius: 10px;
 }
 
 .name {
-  display: block;
-  color: #0b3c32;
-  font-family: Ubuntu;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
+    display: block;
+    color: #0b3c32;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .inn {
-  display: block;
-  color: #0b3c32;
-  font-family: Ubuntu;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  margin-right: 20px;
-  margin-left: 20px;
+    display: block;
+    color: #0b3c32;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .bottom_fill_request {
-  /* width: 228px; */
-  width: 468px;
-  height: 24px;
-  border: 1px solid #0b3c32;
-  border-radius: 0px 0px 10px 10px;
-  background-color: #0b3c32;
-  position: absolute;
-  bottom: 0px;
-  text-align: center;
+    /* width: 228px; */
+    width: 468px;
+    height: 24px;
+    border: 1px solid #0b3c32;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #0b3c32;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
 }
 
 .fill_request_url {
-  color: #eacc76;
-  font-family: Ubuntu;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+    color: #eacc76;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 /* big box about requests */
 .requests_container {
-  position: relative;
-  /* width: auto; */
-  /* height: 1200px; */
-  /* width: 100vh; */
-  width: fit-content;
-  height: fit-content;
+    position: relative;
+    /* width: auto; */
+    /* height: 1200px; */
+    /* width: 100vh; */
+    width: fit-content;
+    height: fit-content;
 
-  /* left: 96px; */
+    /* left: 96px; */
 }
+
 .request_options {
-  margin-top: 20px;
-  display: flex;
+    margin-top: 20px;
+    display: flex;
 }
-
 
 
 .response_processed {
-  display: flex;
-  margin: 0px;
-  padding: 0px;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
 }
+
 .response_unprocessed {
-  display: flex;
-  margin: 0px;
-  padding: 0px;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 
 
 .processed_requests {
-  position: relative;
-  width: 176px;
-  height: 24px;
-  border-radius: 10px 0px 0px 0px;
-  border: 1px solid #0b3c32;
-  flex-shrink: 0;
-  background: #0b3c32;
-  margin-right: -4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    width: 176px;
+    height: 24px;
+    border-radius: 10px 0px 0px 0px;
+    border: 1px solid #0b3c32;
+    flex-shrink: 0;
+    background: #0b3c32;
+    margin-right: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .url_processed_requests {
-  color: #eacc76;
-  font-family: Ubuntu;
-  font-size: 12px;
-  /* font-size: 24px; */
-  font-style: normal;
-  font-weight: 700;
-  text-decoration: none;
+    color: #eacc76;
+    font-family: Ubuntu;
+    font-size: 12px;
+    /* font-size: 24px; */
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .unprocessed_requests {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 188px;
-  height: 24px;
-  flex-shrink: 0;
-  border-radius: 0px 10px 0px 0px;
-  border: 1px solid #0b3c32;
-  color: #0b3c32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 188px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 0px 10px 0px 0px;
+    border: 1px solid #0b3c32;
+    color: #0b3c32;
 
 }
 
 .url_unprocessed_requests {
-  font-family: Ubuntu;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-decoration: none;
-  color: #0b3c32;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    color: #0b3c32;
 }
 
 .responses {
-  height: 325px;
-  width: 1168px;
-  /* border: 1px solid #0b3c32; */
-  border: 2px solid #0b3c32;
-  /* position: absolute; */
-  /* right: 0; */
-  /* left: 0; */
-  /* margin: auto; */
+    height: 325px;
+    width: 1168px;
+    /* border: 1px solid #0b3c32; */
+    border: 2px solid #0b3c32;
+    /* position: absolute; */
+    /* right: 0; */
+    /* left: 0; */
+    /* margin: auto; */
 }
 
 .id {
-  border: 1px solid #0b3c32;
-  /* width: 55px; */
-  width: 268px;
-  height: 35px;
-  line-height: 35px;
-  /* display: inline-flex; */
-  /* align-items: center; */
-  text-align: center;
+    border: 1px solid #0b3c32;
+    /* width: 55px; */
+    width: 268px;
+    height: 35px;
+    line-height: 35px;
+    /* display: inline-flex; */
+    /* align-items: center; */
+    text-align: center;
 }
 
 .service {
-  border: 1px solid #0b3c32;
-  /* width: 80px; */
-  width: 465px;
-  height: 35px;
-  line-height: 35px;
-  /* display: inline-flex; */
-  /* align-items: center; */
-  text-align: center;
+    border: 1px solid #0b3c32;
+    /* width: 80px; */
+    width: 465px;
+    height: 35px;
+    line-height: 35px;
+    /* display: inline-flex; */
+    /* align-items: center; */
+    text-align: center;
 }
 
 .asked_sum {
-  border: 1px solid #0b3c32;
-  /* width: 134px; */
-  width: 235px;
-  height: 35px;
-  line-height: 35px;
-  /* display: inline-flex; */
-  /* align-items: center; */
-  text-align: center;
+    border: 1px solid #0b3c32;
+    /* width: 134px; */
+    width: 235px;
+    height: 35px;
+    line-height: 35px;
+    /* display: inline-flex; */
+    /* align-items: center; */
+    text-align: center;
 }
 
 .approved_sum {
-  border-left: 1px solid #0b3c32;
-  /* width: 890px; */
-  height: 35px;
-  width: 196px;
-  line-height: 35px;
-  /* display: inline-flex; */
-  /* align-items: center; */
-  text-align: center;
-  border: 1px solid #0b3c32
+    border-left: 1px solid #0b3c32;
+    /* width: 890px; */
+    height: 35px;
+    width: 196px;
+    line-height: 35px;
+    /* display: inline-flex; */
+    /* align-items: center; */
+    text-align: center;
+    border: 1px solid #0b3c32
 
 
 }
 
 .responses span {
-  color: #0b3c32;
-  font-family: Ubuntu;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  /* line-height: normal;     */
+    color: #0b3c32;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: normal;     */
 
-  /* margin-right: -4px; */
-  display: inline-block;
-  
+    /* margin-right: -4px; */
+    display: inline-block;
+
 }
 
 .asked_sum_unprocessed {
-  /* width: 1030px; */
-  /* width: 900px; */
-  /* border-left: 1px solid #0b3c32; */
-  border: 1px solid #0b3c32;
-  height: 35px;
-  line-height: 35px;
-  width: 431px;
+    /* width: 1030px; */
+    /* width: 900px; */
+    /* border-left: 1px solid #0b3c32; */
+    border: 1px solid #0b3c32;
+    height: 35px;
+    line-height: 35px;
+    width: 431px;
 }
 
 .button_dropdown {
-  position: absolute;
-  top: -1px;
-  right: -20px;
+    position: absolute;
+    top: -1px;
+    right: -20px;
 }
 
 .dropdown_content {
-  position: absolute;
-  width: 174px;
-  height: 72px;
-  border: 1px solid #0b3c32;
-  background: #0b3c32;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  right: -174px;
-  top: -1px;
+    position: absolute;
+    width: 174px;
+    height: 72px;
+    border: 1px solid #0b3c32;
+    background: #0b3c32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: -174px;
+    top: -1px;
 }
 
 .dropdown_content a {
-  text-decoration: none;
-  color: #eacc76;
-  text-align: center;
-  font-family: Ubuntu;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  display: block;
-  margin: 5px 0;
+    text-decoration: none;
+    color: #eacc76;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: block;
+    margin: 5px 0;
 }
 
 .dropdown_button_close_container {
-  width: 20px;
-  height: 72px;
-  border-radius: 0px 10px 10px 0px;
-  border: 1px solid #0b3c32;
-  background: #0b3c32;
-  position: absolute;
-  right: -22px;
-  display: inline-flex;
-  align-items: center;
+    width: 20px;
+    height: 72px;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid #0b3c32;
+    background: #0b3c32;
+    position: absolute;
+    right: -22px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .dropdown_button_close {
@@ -289,4 +291,4 @@ body {
     height: 72px;
     display: flex;
     align-items: center;
-  }
+}

@@ -18,10 +18,10 @@ body {
     top: 50px;
     left: 50px;
 }
+
 .wrapper > * {
     margin: 5px;
 }
-
 
 
 .clinics_container {
@@ -40,7 +40,6 @@ body {
 }
 
 
-
 .headers {
     display: flex;
     justify-content: center;
@@ -48,7 +47,7 @@ body {
 }
 
 
-.headers p{
+.headers p {
     color: rgb(11, 60, 50);
     font-family: Ubuntu;
     font-size: 16px;
@@ -56,7 +55,7 @@ body {
     line-height: 18px;
     letter-spacing: 0%;
     text-align: left;
-    
+
 
     flex-grow: 1;
 }

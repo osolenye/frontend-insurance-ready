@@ -144,10 +144,10 @@
 
     cursor: pointer;
 }
+
 .attach .upload_file::file-selector-button {
     display: none;
 }
-
 
 
 .input_comment {
@@ -200,7 +200,6 @@
     width: 136px;
     height: 56px;
     border-radius: 6px;
-
 
 
     background-color: #FFFFFF;

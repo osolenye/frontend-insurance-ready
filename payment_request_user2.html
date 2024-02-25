@@ -10,91 +10,98 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="logo">
-                <img src="static/logo.jpg" alt="logo" />
-            </div>
-            <ul class="navbar_buttons">
-                <li class="navbar_button">
-                    <a href="dms_rules.html">О ДМС</a>
-                </li>
-                <li class="navbar_button">
-                    <a href="services.html">Услуги</a>
-                </li>
-                <li class="navbar_button">
-                    <a href="">Клининки</a>
-                </li>
-                <li class="navbar_button">
-                    <a href="profile.html">Профиль</a>
-                </li>
-            </ul>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
         </div>
-    </nav>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="dms_rules.html">О ДМС</a>
+            </li>
+            <li class="navbar_button">
+                <a href="services.html">Услуги</a>
+            </li>
+            <li class="navbar_button">
+                <a href="">Клининки</a>
+            </li>
+            <li class="navbar_button">
+                <a href="profile.html">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 
-    <div class="external_wrapper">
-        <div class="container" id="container">
-            <h1 class="payment_header">Онлайн заявка на выплату</h1>
-            <div class="block">
-                <form action="" class="form_payment">
-                    <input type="text" name=""  placeholder="Стоимость" class="input_price">
+<div class="external_wrapper">
+    <div class="container" id="container">
+        <h1 class="payment_header">Онлайн заявка на выплату</h1>
+        <div class="block">
+            <form action="http://212.112.103.137:6457/api/payment/add/" class="form_payment" id="payment_form"
+            method="post">
+                <input type="text" name="paymentSumm" placeholder="Стоимость" class="input_price">
 
-                    <div class="attach">
-                        <input type="text" name="" placeholder="Мед. заключения врачей (направления, выписки)"
-                            class="input_attach">
-<!--                        <a href="">Прикрепить</a>-->
-                        <input type="file" class="upload_file" placeholder="Прикрепить">
-                    </div>
-                    <div class="attach">
-                        <input type="text" name="" placeholder="ККМ чек" class="input_attach">
-<!--                        <a href="">Прикрепить</a>-->
-                        <input type="file" class="upload_file" placeholder="Прикрепить">
-                    </div>
-                    <div class="attach">
-                        <input type="text" name="" placeholder="Счет фактура о проделанной работе"
-                            class="input_attach">
-<!--                        <a href="">Прикрепить</a>-->
-                        <input type="file" class="upload_file" placeholder="Прикрепить">
-                    </div>
-                    <div class="attach">
-                        <input type="text" name="" placeholder="Интерпретация анализов (УЗИ, рентген и т.д.)"
-                            class="input_attach">
-<!--                        <a href="">Прикрепить</a>-->
-                        <input type="file" class="upload_file" placeholder="Прикрепить">
-                    </div>
+                <div class="attach">
+<!--                    <input type="text" name="" placeholder="Мед. заключения врачей (направления, выписки)"-->
+<!--                           class="input_attach">-->
+                    <div class="input_attach"><span>Мед. заключения врачей (направления, выписки)</span></div>
+                    <!--                        <a href="">Прикрепить</a>-->
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="medical_reports">
+                </div>
+                <div class="attach">
+<!--                    <input type="text" name="" placeholder="ККМ чек" class="input_attach">-->
+
+                    <div class="input_attach"><span>ККМ чек</span></div>
+                    <!--                        <a href="">Прикрепить</a>-->
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="kkm_check">
+                </div>
+                <div class="attach">
+<!--                    <input type="text" name="" placeholder="Счет фактура о проделанной работе"-->
+<!--                           class="input_attach">-->
+                    <div class="input_attach"><span>Счет фактура о проделанной работе</span></div>
+                    <!--                        <a href="">Прикрепить</a>-->
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="invoice">
+                </div>
+                <div class="attach">
+<!--                    <input type="text" name="" placeholder="Интерпретация анализов (УЗИ, рентген и т.д.)"-->
+<!--                           class="input_attach">-->
+                    <div class="input_attach"><span>Интерпретация анализов (УЗИ, рентген и т.д.))</span></div>
+                    <!--                        <a href="">Прикрепить</a>-->
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="analysis">
+                </div>
 
 
-                    <input type="text" name="" id="" placeholder="Комментарий" class="input_comment">
-                    <!-- </form> -->
+                <input type="text" name="" id="" placeholder="Комментарий" class="input_comment">
+                <!-- </form> -->
 
 
-                    <div class="payment_options">
+                <div class="payment_options">
 
-                        <div class="dropdown">
-                            <button class="dropbtn">Способ оплаты</button>
-                            <div class="dropdown-content">
-                                <div class="dropdown-content-flex">
-                                    <a href="#" id="pay_cash">Наличными</a>
-                                    <a href="#" id="pay_cashless">Перечислением</a>
-                                </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Способ оплаты</button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-content-flex">
+                                <a href="#" id="pay_cash">Наличными</a>
+                                <a href="#" id="pay_cashless">Перечислением</a>
                             </div>
                         </div>
-
-                        <input type="text" name="" id="input_card_info" placeholder="1234 1234 1234 1234" class="input_card_info">
                     </div>
 
-                    <div class="submit">
-                        <input type="submit" value="Отправить">
-                    </div>
-                </form>
+                    <input type="text" name="" id="input_card_info" placeholder="1234 1234 1234 1234"
+                           class="input_card_info">
+                </div>
 
-            </div>
+                <div class="submit">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+
         </div>
-
     </div>
 
-    <script src="js/payment_request_user2.js"></script>
+</div>
+
+<script src="js/payment_request_user2.js"></script>
 </body>
 
 </html>

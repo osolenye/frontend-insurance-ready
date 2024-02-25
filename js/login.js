@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log("scale(" + coef + ")");
 
 
-
     var form = document.querySelector("form");
 
     form.addEventListener("submit", function (event) {

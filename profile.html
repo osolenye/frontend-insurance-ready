@@ -2,119 +2,122 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Профиль</title>
-  <link rel="stylesheet" href="css/profile.css" />
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/profile.css"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <nav>
+<nav>
     <div class="navbar">
-      <div class="logo">
-        <img src="static/logo.jpg" alt="logo" />
-      </div>
-      <ul class="navbar_buttons">
-        <li class="navbar_button">
-          <a href="dms_rules.html">О ДМС</a>
-        </li>
-        <li class="navbar_button">
-          <a href="services.html">Услуги</a>
-        </li>
-        <li class="navbar_button">
-          <a href="">Клининки</a>
-        </li>
-        <li class="navbar_button">
-          <a href="profile.html">Профиль</a>
-        </li>
-      </ul>
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
+        </div>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="dms_rules.html">О ДМС</a>
+            </li>
+            <li class="navbar_button">
+                <a href="services.html">Услуги</a>
+            </li>
+            <li class="navbar_button">
+                <a href="">Клининки</a>
+            </li>
+            <li class="navbar_button">
+                <a href="profile.html">Профиль</a>
+            </li>
+        </ul>
     </div>
-  </nav>
+</nav>
 
-  <div class="external_container">
+<div class="external_container">
     <div class="container" id="container">
-      <div class="wrapper" id="wrapper">
-        <!-- some info about the user -->
-        <div class="fill_request">
-          <span class="name" id="name"></span>
-          <span class="inn" id="inn"></span>
+        <div class="wrapper" id="wrapper">
+            <!-- some info about the user -->
+            <div class="fill_request">
+                <span class="name" id="name"></span>
+                <span class="inn" id="inn"></span>
 
-          <div class="bottom_fill_request">
-            <a href="payment_request_user2.html">
-              <span class="fill_request_url">Заполнить заявку на выплату</span>
-              <!-- <p class="span_fill_request_url">Заполнить заявку на выплату</p> -->
-            </a>
-          </div>
+                <div class="bottom_fill_request">
+                    <a href="payment_request_user2.html">
+                        <span class="fill_request_url">Заполнить заявку на выплату</span>
+                        <!-- <p class="span_fill_request_url">Заполнить заявку на выплату</p> -->
+                    </a>
+                </div>
 
-          <div class="dropdown">
-            <a href="" id="button_dropdown_open_link">
-              <div class="button_dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
-                  <mask id="path-1-inside-1_257_37" fill="white">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M10 28H20C25.5228 28 30 23.5228 30 18V10C30 4.47715 25.5228 0 20 0H-2.6226e-06C5.52284 0 10 4.47715 10 10V28Z" />
-                  </mask>
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M10 28H20C25.5228 28 30 23.5228 30 18V10C30 4.47715 25.5228 0 20 0H-2.6226e-06C5.52284 0 10 4.47715 10 10V28Z"
-                    fill="#0B3C32" />
-                  <path
-                    d="M10 28H9V29H10V28ZM20 27H10V29H20V27ZM29 18C29 22.9706 24.9706 27 20 27V29C26.0751 29 31 24.0751 31 18H29ZM29 10V18H31V10H29ZM20 1C24.9706 1 29 5.02944 29 10H31C31 3.92487 26.0751 -1 20 -1V1ZM-2.6226e-06 1H20V-1H-2.6226e-06V1ZM-2.6226e-06 1C4.97056 1 9 5.02944 9 10H11C11 3.92487 6.07513 -1 -2.6226e-06 -1V1ZM9 10V28H11V10H9Z"
-                    fill="#0B3C32" mask="url(#path-1-inside-1_257_37)" />
-                  <path d="M17 11L21 15L17 19" stroke="#EACC76" stroke-width="2" />
-                </svg>
-              </div>
-            </a>
+                <div class="dropdown">
+                    <a href="" id="button_dropdown_open_link">
+                        <div class="button_dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28"
+                                 fill="none">
+                                <mask id="path-1-inside-1_257_37" fill="white">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M10 28H20C25.5228 28 30 23.5228 30 18V10C30 4.47715 25.5228 0 20 0H-2.6226e-06C5.52284 0 10 4.47715 10 10V28Z"/>
+                                </mask>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M10 28H20C25.5228 28 30 23.5228 30 18V10C30 4.47715 25.5228 0 20 0H-2.6226e-06C5.52284 0 10 4.47715 10 10V28Z"
+                                      fill="#0B3C32"/>
+                                <path
+                                        d="M10 28H9V29H10V28ZM20 27H10V29H20V27ZM29 18C29 22.9706 24.9706 27 20 27V29C26.0751 29 31 24.0751 31 18H29ZM29 10V18H31V10H29ZM20 1C24.9706 1 29 5.02944 29 10H31C31 3.92487 26.0751 -1 20 -1V1ZM-2.6226e-06 1H20V-1H-2.6226e-06V1ZM-2.6226e-06 1C4.97056 1 9 5.02944 9 10H11C11 3.92487 6.07513 -1 -2.6226e-06 -1V1ZM9 10V28H11V10H9Z"
+                                        fill="#0B3C32" mask="url(#path-1-inside-1_257_37)"/>
+                                <path d="M17 11L21 15L17 19" stroke="#EACC76" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </a>
 
-            <div class="dropdown_content" id="dropdown_content">
-              <a href="">Обновить мой молис</a>
-              <a href="">Мои лимиты</a>
-              <div class="dropdown_button_close_container">
-                <a href="" id="dropdown_button_close_link">
-                  <div class="dropdown_button_close">
-                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 9L2 5L6 1" stroke="#EACC76" stroke-width="2" />
-                    </svg>
-                  </div>
-                </a>
-              </div>
+                    <div class="dropdown_content" id="dropdown_content">
+                        <a href="">Обновить мой молис</a>
+                        <a href="">Мои лимиты</a>
+                        <div class="dropdown_button_close_container">
+                            <a href="" id="dropdown_button_close_link">
+                                <div class="dropdown_button_close">
+                                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L2 5L6 1" stroke="#EACC76" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- everything about user's requests -->
+            <div class="requests_container">
+                <div class="request_options">
+                    <div class="processed_requests" id="processed_requests">
+                        <a href="" class="url_processed_requests" id="url_processed_requests">Обработанные заявки</a>
+                    </div>
+
+                    <div class="unprocessed_requests" id="unprocessed_requests">
+                        <a href="" class="url_unprocessed_requests" id="url_unprocessed_requests">Необработанные
+                            заявки</a>
+                    </div>
+                </div>
+                <div class="responses">
+                    <div class="response_processed" id="response_processed">
+                        <span class="id" id="processed_id">ID</span>
+                        <span class="service" id="processed_service">Услуга</span>
+                        <span class="asked_sum" id="processed_asked_sum">Запрошенная сумма</span>
+                        <span class="approved_sum" id="processed_approved_sum">Одобренная сумма</span>
+                    </div>
+
+                    <div class="response_unprocessed" id="response_unprocessed">
+                        <span class="id" id="unprocessed_id">ID</span>
+                        <span class="service" id="unprocessed_service">Услуга</span>
+                        <span class="asked_sum_unprocessed" id="unprocessed_asked_sum">Запрошенная сумма</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add_buttons"></div>
         </div>
-
-        <!-- everything about user's requests -->
-        <div class="requests_container">
-          <div class="request_options">
-            <div class="processed_requests" id="processed_requests">
-              <a href="" class="url_processed_requests" id="url_processed_requests">Обработанные заявки</a>
-            </div>
-
-            <div class="unprocessed_requests" id="unprocessed_requests">
-              <a href="" class="url_unprocessed_requests" id="url_unprocessed_requests">Необработанные заявки</a>
-            </div>
-          </div>
-          <div class="responses">
-            <div class="response_processed" id="response_processed">
-              <span class="id" id="processed_id">ID</span>
-              <span class="service" id="processed_service">Услуга</span>
-              <span class="asked_sum" id="processed_asked_sum">Запрошенная сумма</span>
-              <span class="approved_sum" id="processed_approved_sum">Одобренная сумма</span>
-            </div>
-
-            <div class="response_unprocessed" id="response_unprocessed">
-              <span class="id" id="unprocessed_id">ID</span>
-              <span class="service" id="unprocessed_service">Услуга</span>
-              <span class="asked_sum_unprocessed" id="unprocessed_asked_sum">Запрошенная сумма</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="add_buttons"></div>
-      </div>
     </div>
 
-  </div>
-  <script src="js/profile.js"></script>
+</div>
+<script src="js/profile.js"></script>
 </body>
 
 </html>
