@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var coef = 0;
         coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-        console.log(coef);
 
         container.style.transform = "scale(" + coef + ")";
-        console.log("scale(" + coef + ")");
     });
 
     const accessToken = localStorage.getItem("accessToken");
@@ -127,10 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var coef = 0;
     coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-    console.log(coef);
 
     container.style.transform = "scale(" + coef + ")";
-    console.log("scale(" + coef + ")");
 
     var responseProcessed = document.getElementById("response_processed");
     var responseUnprocessed = document.getElementById("response_unprocessed");
@@ -150,16 +146,12 @@ document.addEventListener("DOMContentLoaded", function () {
         responseUnprocessed.style.display = "none";
         responseProcessed.style.display = "flex";
 
-        if (responseUnprocessedContent.length > 0) {
             responseUnprocessedContent.forEach(function (element) {
                 element.style.display = "none";
             });
-        }
-        if (responseProcessed.length > 0) {
             responseProcessedContent.forEach(function (element) {
                 element.style.display = "flex";
             });
-        }
 
         processedRequests.style.background = "#0B3C32";
         urlProcessedRequests.style.color = "#EACC76";
@@ -172,16 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         responseProcessed.style.display = "none";
 
-        if (responseProcessedContent.length > 0) {
             responseProcessedContent.forEach(function (element) {
                 element.style.display = "none";
             });
-        }
-        if (responseUnprocessedContent.length > 0) {
             responseUnprocessedContent.forEach(function (element) {
                 element.style.display = "flex";
             })
-        }
 
         responseUnprocessed.style.display = "flex";
 

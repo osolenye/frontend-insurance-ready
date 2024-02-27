@@ -8,10 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var container = document.getElementById("container");
         var coef = 0;
         coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-        console.log(coef);
 
         registration.style.transform = ("scale(" + coef + ")");
-        console.log("scale(" + coef + ")");
     });
 
     var registration = document.getElementById("registration");
@@ -21,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var container = document.getElementById("container");
     var coef = 0;
     coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-    console.log(coef);
 
     registration.style.transform = ("scale(" + coef + ")");
-    console.log("scale(" + coef + ")");
     var noNumberError = document.getElementById("no_number_error");
     noNumberError.style.display = "none";
 

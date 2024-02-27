@@ -6,10 +6,8 @@ window.addEventListener('resize', function () {
 
     var coef = 0;
     coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-    console.log(coef);
 
     container.style.transform = "scale(" + coef + ")";
-    console.log("scale(" + coef + ")");
 });
 
 var w = window.innerWidth;
@@ -19,10 +17,8 @@ var container = document.getElementById("container");
 
 var coef = 0;
 coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-console.log(coef);
 
 container.style.transform = "scale(" + coef + ")";
-console.log("scale(" + coef + ")");
 
 var button_pay_cash = document.getElementById("pay_cash");
 var button_pay_cashless = document.getElementById("pay_cashless");
@@ -32,17 +28,18 @@ var input_card_info = document.getElementById("input_card_info");
 input_card_info.style.display = "none";
 
 
-var cash_payment = 0;
-var card_payment = 0;
+// var cash_payment_boolean = false;
+// var card_payment_boolean = false;
 
+var cash_payment_boolean = true;
+var card_payment_boolean;
 button_pay_cash.addEventListener("click", (event) => {
     event.preventDefault();
 
     input_card_info.style.display = "none";
-    cash_payment = 1;
-    card_payment = 0;
+    cash_payment_boolean = true;
+    card_payment_boolean = false;
 
-    localStorage.setItem("card_payment", card_payment);
 });
 
 button_pay_cashless.addEventListener("click", (event) => {
@@ -50,10 +47,8 @@ button_pay_cashless.addEventListener("click", (event) => {
 
 
     input_card_info.style.display = "block";
-    card_payment = 1;
-    cash_payment = 0;
-
-    localStorage.setItem("card_payment", card_payment);
+    card_payment_boolean = true;
+    cash_payment_boolean = false;
 });
 
 
@@ -89,17 +84,12 @@ document.getElementById('payment_form').addEventListener('submit', function(even
     // Получаем данные из формы
     var paymentSumm = document.querySelector('.input_price').value;
     var cash_payment = document.getElementById('pay_cash').checked;
-    // var card_payment = document.getElementById('pay_cashless').checked;
-    // var cardInfo = document.querySelector('.input_card_info').value;
 
     // Создаем объект FormData
     var formData = new FormData();
     formData.append('paymentSumm', paymentSumm);
-    // formData.append('cash_payment', cash_payment);
-    formData.append("cash_payment", localStorage.getItem("cash_payment"));
-    // formData.append('card_payment', card_payment);
-    // formData.append('card_number', cardInfo);
-    // formData.append('service', 1);
+    formData.append('card_payment', card_payment_boolean);
+    // formData.append('cash_payment', cash_payment_boolean);
 
     // Добавляем файлы
     var medicalReports = document.getElementById('medical_reports').files;
@@ -110,9 +100,12 @@ document.getElementById('payment_form').addEventListener('submit', function(even
     formData.append('referral', medicalReports[0]);
     formData.append('kkmCheck', kkmCheck[0]);
     formData.append('invoice', invoice[0]);
-    for (const value of formData.values()) {
-        console.log(value);
+
+    if (card_payment_boolean == true) {
+        formData.append("card_number", input_card_info.value);
     }
+
+
     var accessToken = localStorage.getItem("accessToken");
     // Отправляем POST-запрос
     fetch('http://212.112.103.137:6457/api/payment/add/', {

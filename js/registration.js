@@ -6,10 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var container = document.getElementById("container");
     var coef = 0;
     coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-    console.log(coef);
 
     login.style.transform = ("scale(" + coef + ")");
-    // console.log("scale(" + coef + ")");
 
 
     var noNumberError = document.getElementById("no_number_error");

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var container = document.getElementById("container");
         var coef = 0;
         coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-        console.log(coef);
 
         login.style.transform = ("scale(" + coef + ")");
     });
@@ -20,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var container = document.getElementById("container");
     var coef = 0;
     coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-    console.log(coef);
 
     login.style.transform = ("scale(" + coef + ")");
-    // console.log("scale(" + coef + ")");
 
 
     var form = document.querySelector("form");
@@ -57,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 // console.log(data); // Здесь вы можете обрабатывать полученные данные
                 localStorage.setItem("accessToken", data.access);
-                //console.log(localStorage.getItem("accessToken"));
+                console.log(localStorage.getItem("accessToken"));
                 window.location.href = "profile.html";
             })
             .catch(error => {

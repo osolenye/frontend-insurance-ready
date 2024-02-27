@@ -39,28 +39,28 @@
         <div class="block">
             <form action="http://212.112.103.137:6457/api/payment/add/" class="form_payment" id="payment_form"
             method="post">
-                <input type="text" name="paymentSumm" placeholder="Стоимость" class="input_price">
+                <input type="text" name="paymentSumm" placeholder="Стоимость" class="input_price" required>
 
                 <div class="attach">
 <!--                    <input type="text" name="" placeholder="Мед. заключения врачей (направления, выписки)"-->
 <!--                           class="input_attach">-->
                     <div class="input_attach"><span>Мед. заключения врачей (направления, выписки)</span></div>
                     <!--                        <a href="">Прикрепить</a>-->
-                    <input type="file" class="upload_file" placeholder="Прикрепить" id="medical_reports">
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="medical_reports" required>
                 </div>
                 <div class="attach">
 <!--                    <input type="text" name="" placeholder="ККМ чек" class="input_attach">-->
 
                     <div class="input_attach"><span>ККМ чек</span></div>
                     <!--                        <a href="">Прикрепить</a>-->
-                    <input type="file" class="upload_file" placeholder="Прикрепить" id="kkm_check">
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="kkm_check" required>
                 </div>
                 <div class="attach">
 <!--                    <input type="text" name="" placeholder="Счет фактура о проделанной работе"-->
 <!--                           class="input_attach">-->
                     <div class="input_attach"><span>Счет фактура о проделанной работе</span></div>
                     <!--                        <a href="">Прикрепить</a>-->
-                    <input type="file" class="upload_file" placeholder="Прикрепить" id="invoice">
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="invoice" required>
                 </div>
                 <div class="attach">
 <!--                    <input type="text" name="" placeholder="Интерпретация анализов (УЗИ, рентген и т.д.)"-->
