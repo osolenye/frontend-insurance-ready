@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("There is a problem with the fetch operation", error);
             });
 
-
     });
 });
 

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const accessToken = localStorage.getItem("accessToken");
+    console.log(accessToken);
 
     fetch("http://212.112.103.137:6457/api/profile/", {
         method: "GET",
@@ -23,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(localStorage.getItem("accessToken"));
             console.log(data.user);
             var name = document.getElementById("name");
             var inn = document.getElementById("inn");
@@ -198,3 +198,55 @@ document.addEventListener("DOMContentLoaded", function () {
         buttonDropdownOpenLink.style.display = "block";
     });
 });
+
+
+var update_policy = document.getElementById("update_policy");
+var my_limits = document.getElementById("my_limits");
+
+
+update_policy.addEventListener("click", function(event) {
+  event.preventDefault();
+fetch("http://212.112.103.137:6457/api/update/", {
+  method: 'GET',
+  headers: {
+    'Authorization': "Bearer " + localStorage.getItem("accessToken")
+  }
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
+.then(data => {
+  console.log(data); // Обрабатываем полученные данные
+})
+.catch(error => {
+  console.error('There was a problem with your fetch operation:', error);
+});
+});
+
+
+my_limits.addEventListener("click", function(event) {
+  event.preventDefault();
+fetch("http://212.112.103.137:6457/api/limits/", {
+  method: 'GET',
+  headers: {
+    'Authorization': "Bearer " + localStorage.getItem("accessToken")
+  }
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
+.then(data => {
+  console.log(data); // Обрабатываем полученные данные
+})
+.catch(error => {
+  console.error('There was a problem with your fetch operation:', error);
+});
+});
+
+
