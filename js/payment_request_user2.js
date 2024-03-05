@@ -32,7 +32,7 @@ input_card_info.style.display = "none";
 // var card_payment_boolean = false;
 
 var cash_payment_boolean = true;
-var card_payment_boolean;
+var card_payment_boolean = false;
 button_pay_cash.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -78,54 +78,108 @@ dropdown.addEventListener('mouseleave', function () {
 });
 
 
-document.getElementById('payment_form').addEventListener('submit', function(event) {
-    event.preventDefault(); // предотвращаем стандартное поведение отправки формы
+// var form = document.getElementById("payment_form");
 
-    // Получаем данные из формы
-    var paymentSumm = document.querySelector('.input_price').value;
-    var cash_payment = document.getElementById('pay_cash').checked;
+// form.addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent the default form submission behavior
 
-    // Создаем объект FormData
+//     // Gather all field values
+//     var paymentSumm = document.querySelector(".input_price").value;
+//     var medicalReportsFile = document.getElementById("medical_reports").files[0];
+//     var kkmCheckFile = document.getElementById("kkm_check").files[0];
+//     var invoiceFile = document.getElementById("invoice").files[0];
+//     var analysisFile = document.getElementById("analysis").files[0];
+//     var comment = document.querySelector(".input_comment").value;
+//     var paymentOption = document.querySelector(".dropbtn").textContent;
+//     var cardInfo = document.getElementById("input_card_info").value;
+
+//     // Create a FormData object to send files and other form data
+//     var jsonData = {
+//         paymentSumm: paymentSumm,
+//         opinions_on_medications: medicalReportsFile,
+//         kkmCheck: kkmCheckFile,
+//         invoice: invoiceFile,
+//         referral: analysisFile,
+//         // comment: comment,
+//         card_number: cardInfo,
+//         card_payment: card_payment_boolean,
+//         cash_payment: cash_payment_boolean
+//     };
+
+
+//     console.log(JSON.stringify(jsonData));
+//     console.log(jsonData);
+//     // Send the form data to the specified URL using fetch
+//     fetch("http://212.112.103.137:6457/api/payment/add/", {
+//         method: "POST",
+//         headers: {
+//             "Authorization": "Bearer " + localStorage.getItem("accessToken"),
+//             "Content-Type": "multipart/form-data"
+//         },
+//         // body: JSON.stringify(jsonData)
+//         body: jsonData
+//     })
+//         .then(response => {
+//             if (response.ok) {
+//                 // Handle successful response
+//                 console.log("Form submitted successfully!");
+//                 // You can redirect or show a success message here
+//             } else {
+//                 // Handle error response
+//                 console.error("Form submission failed!");
+//                 console.error(response);
+//                 // You can handle errors or show an error message here
+//             }
+//         })
+//         .catch(error => {
+//             console.error("Error:", error);
+//             // Handle network errors
+//         });
+// });
+
+
+
+var form = document.getElementById("payment_form");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Create a new FormData object
     var formData = new FormData();
-    formData.append('paymentSumm', paymentSumm);
-    formData.append('card_payment', card_payment_boolean);
-    // formData.append('cash_payment', cash_payment_boolean);
 
-    // Добавляем файлы
-    var medicalReports = document.getElementById('medical_reports').files;
-    var kkmCheck = document.getElementById('kkm_check').files;
-    var invoice = document.getElementById('invoice').files;
-    var analysis = document.getElementById('analysis').files;
-
-    formData.append('referral', medicalReports[0]);
-    formData.append('kkmCheck', kkmCheck[0]);
-    formData.append('invoice', invoice[0]);
-
-    if (card_payment_boolean == true) {
-        formData.append("card_number", input_card_info.value);
-    }
+    // Gather all field values
+    formData.append("paymentSumm", document.querySelector(".input_price").value);
+    formData.append("opinions_on_medications", document.getElementById("medical_reports").files[0]);
+    formData.append("kkmCheck", document.getElementById("kkm_check").files[0]);
+    formData.append("invoice", document.getElementById("invoice").files[0]);
+    formData.append("referral", document.getElementById("analysis").files[0]);
+    formData.append("card_number", document.getElementById("input_card_info").value);
+    formData.append("card_payment", card_payment_boolean);
+    formData.append("cash_payment", cash_payment_boolean);
 
 
-    var accessToken = localStorage.getItem("accessToken");
-    // Отправляем POST-запрос
-    fetch('http://212.112.103.137:6457/api/payment/add/', {
-        method: 'POST',
+    // Send the form data to the specified URL using fetch
+    fetch("http://212.112.103.137:6457/api/payment/add/", {
+        method: "POST",
         headers: {
-            // 'Authorization': 'Bearer %{accessToken}'
-            'Authorization': 'Bearer ' + accessToken
+            "Authorization": "Bearer " + localStorage.getItem("accessToken"),
         },
         body: formData
     })
         .then(response => {
             if (response.ok) {
-                console.log('Запрос успешно отправлен');
-                // здесь можно выполнить какие-то действия при успешной отправке
+                // Handle successful response
+                console.log("Form submitted successfully!");
+                // You can redirect or show a success message here
             } else {
-                console.error('Ошибка при отправке запроса');
-                // здесь можно обработать ошибку, если что-то пошло не так
+                // Handle error response
+                console.error("Form submission failed!");
+                console.error(response);
+                // You can handle errors or show an error message here
             }
         })
         .catch(error => {
-            console.error('Произошла ошибка:', error);
+            console.error("Error:", error);
+            // Handle network errors
         });
 });
