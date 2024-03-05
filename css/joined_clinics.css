@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper > * {
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 
@@ -58,6 +58,7 @@ body {
 
 
     flex-grow: 1;
+    width: 292px;
 }
 
 
@@ -70,5 +71,8 @@ body {
 .clinic_info {
     width: 1168px;
     height: 56px;
-    background-color: ;
+}
+
+#clinic_info_background {
+    background-color: rgb(253, 250, 241);
 }

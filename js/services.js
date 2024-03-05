@@ -1,3 +1,5 @@
+var services = [];
+
 window.addEventListener('resize', function () {
     var w = window.innerWidth;
     var h = window.innerHeight;
@@ -38,6 +40,7 @@ fetch(url)
             data.forEach(service => {
                 var p = document.createElement("p");
                 p.textContent = "- " + service.name; // Замените "name" на имя поля, содержащее информацию об услуге
+                services.push(service.name);
                 allowedServices.appendChild(p);
             });
             localStorage.setItem("services", JSON.stringify(data)); // Сохраняем данные в localStorage
@@ -75,6 +78,7 @@ fetch(url)
         console.error('There has been a problem with your fetch operation:', error);
     });
 
+
 function displayServices(data, page, itemsPerPage) {
     var allowedServices = document.getElementById("allowed_services");
     allowedServices.innerHTML = ""; // Clear previous content
@@ -89,3 +93,7 @@ function displayServices(data, page, itemsPerPage) {
         allowedServices.appendChild(p);
     });
 }
+
+
+
+console.log(services);
