@@ -77,9 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
           responseProcessed.appendChild(askedSumSpan);
           responseProcessed.appendChild(approvedSumSpan);
 
-          // Добавляем элемент response_processed в контейнер responsesContainer
-          responsesContainer.appendChild(responseProcessed);
+          var link = document.createElement("a");
+          link.href = "request_processing.html";
+          link.classList.add("request_details");
+          link.appendChild(responseProcessed);
 
+          // Добавляем элемент response_processed в контейнер responsesContainer
+          // responsesContainer.appendChild(responseProcessed);
+          responsesContainer.appendChild(link);
           responseProcessedContent = document.querySelectorAll("#response_processed_content");
         } else if (request.processed == false) {
           // Создаем новый элемент response_unprocessed
@@ -104,9 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
           responseUnprocessed.appendChild(idSpan);
           responseUnprocessed.appendChild(serviceSpan);
           responseUnprocessed.appendChild(askedSumSpan);
+          var link = document.createElement("a");
+          link.href = "request_processing.html";
+          link.classList.add("request_details");
+          link.appendChild(responseUnprocessed);
 
           // Добавляем элемент response_unprocessed в контейнер responsesContainer
-          responsesContainer.appendChild(responseUnprocessed);
+          // responsesContainer.appendChild(responseUnprocessed);
+          responsesContainer.appendChild(link);
           responseUnprocessedContent = document.querySelectorAll("#response_unprocessed_content");
           responseUnprocessedContent.forEach(function (element) {
             element.style.display = "none";

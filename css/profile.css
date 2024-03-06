@@ -289,3 +289,8 @@ body {
     display: flex;
     align-items: center;
 }
+
+
+.request_details {
+    text-decoration: none;
+}
