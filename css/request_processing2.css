@@ -191,3 +191,45 @@
 .form_patient_search {
     margin-bottom: 8px;
 }
+
+#isAccepted {
+    position: relative;
+    left: 18px;
+    display: flex;
+    gap: 4px;
+}
+
+
+#accepted {
+    color: rgb(234, 204, 118);
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#isChecked {
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    color: rgb(234, 204, 118);
+    display: flex;
+    align-items: center;
+}
+.checkbox_wrapper {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cross {
+    position: absolute;
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}

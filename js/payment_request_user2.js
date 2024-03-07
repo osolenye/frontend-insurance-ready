@@ -78,7 +78,7 @@ dropdown.addEventListener('mouseleave', function () {
 });
 
 
-// var form = document.getElementById("payment_form");
+// var form =
 
 // form.addEventListener("submit", function (event) {
 //     event.preventDefault(); // Prevent the default form submission behavior
@@ -107,7 +107,6 @@ dropdown.addEventListener('mouseleave', function () {
 //     };
 
 
-//     console.log(JSON.stringify(jsonData));
 //     console.log(jsonData);
 //     // Send the form data to the specified URL using fetch
 //     fetch("http://212.112.103.137:6457/api/payment/add/", {
@@ -149,20 +148,42 @@ form.addEventListener("submit", function (event) {
 
     // Gather all field values
     formData.append("paymentSumm", document.querySelector(".input_price").value);
-    formData.append("opinions_on_medications", document.getElementById("medical_reports").files[0]);
-    formData.append("kkmCheck", document.getElementById("kkm_check").files[0]);
-    formData.append("invoice", document.getElementById("invoice").files[0]);
-    formData.append("referral", document.getElementById("analysis").files[0]);
+    // formData.append("opinions_on_medications", document.getElementById("medical_reports").files[0]);
+    // formData.append("kkmCheck", document.getElementById("kkm_check").files[0]);
+    // formData.append("invoice", document.getElementById("invoice").files[0]);
+    // formData.append("referral", document.getElementById("analysis").files[0]);
+
+    var medicalReports = document.getElementById('medical_reports').files[0];
+    var kkmCheck = document.getElementById('kkm_check').files[0];
+    var invoice = document.getElementById('invoice').files[0];
+    var analysis = document.getElementById('analysis').files[0];
+    // Append the files to the FormData object
+    if (medicalReports) {
+        formData.append('opinions_on_medications', medicalReports);
+    }
+    if (kkmCheck) {
+        formData.append('kkmCheck', kkmCheck);
+    }
+    if (invoice) {
+        formData.append('invoice', invoice);
+    }
+    if (analysis) {
+        formData.append('referral', analysis);
+    }
+
     formData.append("card_number", document.getElementById("input_card_info").value);
     formData.append("card_payment", card_payment_boolean);
     formData.append("cash_payment", cash_payment_boolean);
-
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ', ' + pair[1]);
+    }
 
     // Send the form data to the specified URL using fetch
     fetch("http://212.112.103.137:6457/api/payment/add/", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("accessToken"),
+            // 'Origin': 'http://212.112.103.137:6457/api/payment/add/'
         },
         body: formData
     })
@@ -174,7 +195,6 @@ form.addEventListener("submit", function (event) {
             } else {
                 // Handle error response
                 console.error("Form submission failed!");
-                console.error(response);
                 // You can handle errors or show an error message here
             }
         })

@@ -78,9 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
           responseProcessed.appendChild(approvedSumSpan);
 
           var link = document.createElement("a");
-          link.href = "request_processing.html";
+          // link.href = "request_processing.html";
+          link.href = "";
           link.classList.add("request_details");
           link.appendChild(responseProcessed);
+
+          
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            localStorage.setItem("id", request.id);
+            window.location.href = "request_processing.html"
+          });
 
           // Добавляем элемент response_processed в контейнер responsesContainer
           // responsesContainer.appendChild(responseProcessed);
@@ -110,9 +119,17 @@ document.addEventListener("DOMContentLoaded", function () {
           responseUnprocessed.appendChild(serviceSpan);
           responseUnprocessed.appendChild(askedSumSpan);
           var link = document.createElement("a");
-          link.href = "request_processing.html";
+          // link.href = "request_processing.html";
+          link.href = "";
           link.classList.add("request_details");
           link.appendChild(responseUnprocessed);
+
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            localStorage.setItem("id", request.id);
+            window.location.href = "request_processing.html"
+          });
 
           // Добавляем элемент response_unprocessed в контейнер responsesContainer
           // responsesContainer.appendChild(responseUnprocessed);
@@ -207,57 +224,57 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownContent.style.display = "none";
     buttonDropdownOpenLink.style.display = "block";
   });
-});
 
 
-var update_policy = document.getElementById("update_policy");
-var my_limits = document.getElementById("my_limits");
+  var update_policy = document.getElementById("update_policy");
+  var my_limits = document.getElementById("my_limits");
 
 
-update_policy.addEventListener("click", function (event) {
-  event.preventDefault();
-  fetch("http://212.112.103.137:6457/api/update/", {
-    method: 'GET',
-    headers: {
-      'Authorization': "Bearer " + localStorage.getItem("accessToken")
-    }
-  })
-    .then(response => {
-      if (!response.ok) {
-        console.log(response);
-        throw new Error('Network response was not ok');
+  update_policy.addEventListener("click", function (event) {
+    event.preventDefault();
+    fetch("http://212.112.103.137:6457/api/update/", {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer " + localStorage.getItem("accessToken")
       }
-      return response.json();
     })
-    .then(data => {
-      console.log(data); // Обрабатываем полученные данные
-    })
-    .catch(error => {
-      console.error('There was a problem with your fetch operation:', error);
-    });
-});
+      .then(response => {
+        if (!response.ok) {
+          console.log(response);
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); // Обрабатываем полученные данные
+      })
+      .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+      });
+  });
 
 
-my_limits.addEventListener("click", function (event) {
-  event.preventDefault();
-  fetch("http://212.112.103.137:6457/api/limits/", {
-    method: 'GET',
-    headers: {
-      'Authorization': "Bearer " + localStorage.getItem("accessToken")
-    }
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+  my_limits.addEventListener("click", function (event) {
+    event.preventDefault();
+    fetch("http://212.112.103.137:6457/api/limits/", {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer " + localStorage.getItem("accessToken")
       }
-      return response.json();
     })
-    .then(data => {
-      console.log(data); // Обрабатываем полученные данные
-    })
-    .catch(error => {
-      console.error('There was a problem with your fetch operation:', error);
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); // Обрабатываем полученные данные
+      })
+      .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+      });
+  });
 });
 
 
