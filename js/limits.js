@@ -53,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(sublimits.sublimits[0].id);
     for (var i = 0; i < sublimits.sublimits.length; i++) {
         for (var j = 0; j < limits.limits.length; j++) {
-            if ()
+            if (sublimits.sublimits[i].limitID == limits.limits[j].id) {
+                
+            }
         }
     }
 });

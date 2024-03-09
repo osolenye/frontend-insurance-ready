@@ -4,48 +4,73 @@
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 .wrapper {
-    height: 100vh;
-    width: 936px;
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
 }
 
 .block {
-    /* display: flex; */
+    display: flex;
     height: fit-content;
-    display: inline-flex;
-    margin: -2px;
 }
 
-
-.content {
+.block_wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.limit {
     box-sizing: border-box;
     border: 1px solid rgb(11, 60, 50);
-    justify-content: center;
-    height: fit-content;
     width: 356px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 8px;
 }
 
-.count {
-    display: flex;
-    flex-direction: column;
+.number {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(11, 60, 50);
+    border-right: 1px solid rgb(11, 60, 50);
+    border-top: 1px solid rgb(11, 60, 50);
+    width: 92px;
+}
+
+.limit span {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+#medical_emergency_24hrs {
+    height: 43.5px;
+}
+
+#outpatient_care {
+    height: 32px;
+}
+
+.limit_content {
     box-sizing: border-box;
     border: 1px solid rgb(11, 60, 50);
+    width: 356px;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 92px;
-    height: auto;
+    padding: 8px;
+    flex-direction: column;
 }
 
-.content span {
+.limit_content span {
     color: rgb(11, 60, 50);
     font-family: Ubuntu;
     font-size: 12px;
@@ -53,7 +78,19 @@
     line-height: 14px;
     letter-spacing: 0%;
     text-align: left;
+    display: block;
 }
-#title {
+
+#bold {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 12px;
     font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+#heal_massage {
+    height: 107px;
 }
