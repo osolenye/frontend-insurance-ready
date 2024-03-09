@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
           link.classList.add("request_details");
           link.appendChild(responseProcessed);
 
-          
+
           link.addEventListener("click", function (event) {
             event.preventDefault();
 
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!response.ok) {
           dropdownContent.style.display = "none";
           buttonDropdownOpenLink.style.display = "block";
-            throw new Error('Network response was not ok');
+          throw new Error('Network response was not ok');
         }
         return response.json();
       })
@@ -274,12 +274,57 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         dropdownContent.style.display = "none";
         buttonDropdownOpenLink.style.display = "block";
-        console.log(data); // Обрабатываем полученные данные
+        localStorage.setItem("limits", data);
       })
       .catch(error => {
         console.error('There was a problem with your fetch operation:', error);
       });
+    fetch("http://212.112.103.137:6457/api/sublimits/", {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer " + localStorage.getItem("accessToken")
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          dropdownContent.style.display = "none";
+          buttonDropdownOpenLink.style.display = "block";
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        dropdownContent.style.display = "none";
+        buttonDropdownOpenLink.style.display = "block";
+        localStorage.setItem("sublimits", data);
+      })
+      .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+      });
+
   });
+
+  var limits = JSON.parse(localStorage.getItem("limits"));
+  var sublimits = JSON.parse(localStorage.getItem("sublimits"));
+  for (let i = 0; i < sublimits.sublimits.length; i++) {
+    for (let j = 0; j < limits.limits.length; j++) {
+      if (sublimits.sublimits[i].limitID === limits.limits[j].id) {
+        var blockWrappers = document.querySelectorAll(".block_wrapper");
+
+        blockWrappers.forEach(wrapper => {
+          var block = wrapper.querySelector(".block");
+
+          var bold = block.querySelector("#bold");
+          if (bold) {
+            if (bold.innerHTML === limits.limits[j].limitNameCRM + "") {
+              // block.querySelector(".number").querySelector("span").innerHTML = limits.limits[j].limitSummCRM + "";
+              block.querySelector(".number").querySelector("span").innerHTML = "laskjdf";
+            }
+          }
+        })
+      }
+    }
+  }
 });
 
 
