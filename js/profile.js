@@ -229,7 +229,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var update_policy = document.getElementById("update_policy");
   var my_limits = document.getElementById("my_limits");
 
-
   update_policy.addEventListener("click", function (event) {
     event.preventDefault();
     fetch("http://212.112.103.137:6457/api/update/", {
@@ -240,19 +239,21 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then(response => {
         if (!response.ok) {
-          console.log(response);
-          throw new Error('Network response was not ok');
+          dropdownContent.style.display = "none";
+          buttonDropdownOpenLink.style.display = "block";
+            throw new Error('Network response was not ok');
         }
         return response.json();
       })
       .then(data => {
+        dropdownContent.style.display = "none";
+        buttonDropdownOpenLink.style.display = "block";
         console.log(data); // Обрабатываем полученные данные
       })
       .catch(error => {
         console.error('There was a problem with your fetch operation:', error);
       });
   });
-
 
   my_limits.addEventListener("click", function (event) {
     event.preventDefault();
@@ -264,11 +265,15 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then(response => {
         if (!response.ok) {
+          dropdownContent.style.display = "none";
+          buttonDropdownOpenLink.style.display = "block";
           throw new Error('Network response was not ok');
         }
         return response.json();
       })
       .then(data => {
+        dropdownContent.style.display = "none";
+        buttonDropdownOpenLink.style.display = "block";
         console.log(data); // Обрабатываем полученные данные
       })
       .catch(error => {
