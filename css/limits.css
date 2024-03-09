@@ -6,7 +6,7 @@
 .container_limits {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .wrapper_limits {
@@ -97,4 +97,17 @@
 
 .container_limits {
     /* display: none; */
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
 }

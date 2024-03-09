@@ -316,9 +316,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
           var bold = block.querySelector("#bold");
           if (bold) {
-            if (bold.innerHTML === limits.limits[j].limitNameCRM + "") {
-              // block.querySelector(".number").querySelector("span").innerHTML = limits.limits[j].limitSummCRM + "";
-              block.querySelector(".number").querySelector("span").innerHTML = "laskjdf";
+            if (bold.innerText === limits.limits[j].limitNameCRM + "") {
+              block.querySelector(".number").querySelector("span").innerText = limits.limits[j].limitSummCRM + "";
             }
           }
         })
