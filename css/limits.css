@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     /* align-items: center; */
+    background-color: white;
 }
 
 .wrapper_limits {
@@ -96,7 +97,7 @@
 }
 
 .container_limits {
-    /* display: none; */
+    display: none;
 }
 
 .number {
@@ -111,3 +112,4 @@
     letter-spacing: 0%;
     text-align: left;
 }
+
