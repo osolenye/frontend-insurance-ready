@@ -21,7 +21,6 @@ coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
 container.style.transform = "scale(" + coef + ")";
 
 
-var user_inn = 0;
 var search_by_inn = document.getElementById("search_by_id");
 document.addEventListener("DOMContentLoaded", function () {
     var inputField = document.querySelector(".input_patient_name");
@@ -32,12 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Здесь вы можете выполнить любые действия с полученным значением, например, отправить его на сервер для поиска пациента
 
+        var accessToken = localStorage.getItem("accessToken");
         // Пример: выводим значение в консоль
         if (inputValue.length == 14) {
-            console.log(14);
-            user_inn = inputValue;
+            fetch("http://212.112.103.137:6457/api/search_user/?inn=" + inputValue, {
+                method: "GET",
+                headers: {
+                  "Authorization": `Bearer ${accessToken}`
+              }
+          })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("search_by_inn").innerHTML = data[0].first_name + " " + data[0].last_name;
+                localStorage.setItem("userId", JSON.stringify(data[0]));
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
         } else if (inputValue.length > 14 || inputValue.length < 14) {
-            console.log("inn must be 14 characters!");
+            document.getElementById("search_by_inn").innerHTML = "Инн должен состоять из 14 цифр"
         }
     });
 });
@@ -51,6 +63,10 @@ form.addEventListener("submit", function (event) {
     // Create a new FormData object
     var formData = new FormData();
 
+    var medicalReports = document.getElementById('medical_reports').files[0];
+    var kkmCheck = document.getElementById('kkm_check').files[0];
+    var invoice = document.getElementById('invoice').files[0];
+    var analysis = document.getElementById('analysis').files[0];
     // Gather all field values
     formData.append("paymentSumm", document.querySelector(".input_price").value);
     // Append the files to the FormData object
@@ -66,6 +82,7 @@ form.addEventListener("submit", function (event) {
     if (analysis) {
         formData.append('referral', analysis);
     }
+    formData.append("user", JSON.parse(localStorage.getItem("userId")).id);
 
 
     // Send the form data to the specified URL using fetch
@@ -76,22 +93,22 @@ form.addEventListener("submit", function (event) {
         },
         body: formData
     })
-        .then(response => {
-            if (response.ok) {
+    .then(response => {
+        if (response.ok) {
                 // Handle successful response
-                console.log("Form submitted successfully!");
+            console.log("Form submitted successfully!");
                 // You can redirect or show a success message here
-            } else {
+        } else {
                 // Handle error response
-                console.error("Form submission failed!");
-                console.error(response);
+            console.error("Form submission failed!");
+            console.error(response);
                 // You can handle errors or show an error message here
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
             // Handle network errors
-        });
+    });
 });
 
 

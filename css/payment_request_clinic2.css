@@ -76,7 +76,7 @@
     margin-bottom: 8px;
 }
 
-.attach input {
+.attach .input_attach {
     color: rgb(141, 141, 141);
     font-family: Ubuntu;
     font-size: 14px;
@@ -84,13 +84,17 @@
     line-height: 16px;
     letter-spacing: 0%;
     text-align: left;
+    background-color: rgb(255, 255, 255);
 
     width: 456px;
     height: 36px;
 
     border-radius: 6px;
-
+    
+    display: flex;
+    align-items: center;
 }
+
 
 .attach a {
     width: 140px;
