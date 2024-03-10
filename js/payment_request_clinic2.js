@@ -42,58 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     var form = document.getElementById("form_payment");
-
-//     form.addEventListener("submit", function (event) {
-//         event.preventDefault(); // Prevent the default form submission behavior
-
-//         // Gather all field values
-//         var paymentSumm = document.querySelector(".input_price").value;
-//         var medicalReportsFile = document.getElementById("medical_reports").files[0];
-//         var kkmCheckFile = document.getElementById("kkm_check").files[0];
-//         var invoiceFile = document.getElementById("invoice").files[0];
-//         var analysisFile = document.getElementById("analysis").files[0];
-//         var comment = document.querySelector(".input_comment").value;
-
-//         // Create a FormData object to send files and other form data
-//         var jsonData = {
-//             paymentSumm: paymentSumm,
-//             opinions_on_medications: medicalReportsFile,
-//             kkmCheck: kkmCheckFile,
-//             invoice: invoiceFile,
-//             referral: analysisFile,
-//             comment: comment,
-//         };
-
-
-//         // Send the form data to the specified URL using fetch
-//         fetch("http://212.112.103.137:6457/payment/payment/add/", {
-//             method: "POST",
-//             headers: {
-//                 "Authorization": "Bearer " + localStorage.getItem("accessToken"),
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(jsonData)
-//         })
-//             .then(response => {
-//                 if (response.ok) {
-//                     // Handle successful response
-//                     console.log("Form submitted successfully!");
-//                     // You can redirect or show a success message here
-//                 } else {
-//                     // Handle error response
-//                     console.error("Form submission failed!");
-//                     console.error(response);
-//                     // You can handle errors or show an error message here
-//                 }
-//             })
-//             .catch(error => {
-//                 console.error("Error:", error);
-//                 // Handle network errors
-//             });
-//     });
-// });
 
 var form = document.getElementById("form_payment");
 
@@ -105,12 +53,19 @@ form.addEventListener("submit", function (event) {
 
     // Gather all field values
     formData.append("paymentSumm", document.querySelector(".input_price").value);
-    formData.append("opinions_on_medications", document.getElementById("medical_reports").files[0]);
-    formData.append("kkmCheck", document.getElementById("kkm_check").files[0]);
-    formData.append("invoice", document.getElementById("invoice").files[0]);
-    formData.append("referral", document.getElementById("analysis").files[0]);
-    formData.append("inn", user_inn);
-
+    // Append the files to the FormData object
+    if (medicalReports) {
+        formData.append('opinions_on_medications', medicalReports);
+    }
+    if (kkmCheck) {
+        formData.append('kkmCheck', kkmCheck);
+    }
+    if (invoice) {
+        formData.append('invoice', invoice);
+    }
+    if (analysis) {
+        formData.append('referral', analysis);
+    }
 
 
     // Send the form data to the specified URL using fetch
