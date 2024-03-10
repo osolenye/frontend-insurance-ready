@@ -1,0 +1,141 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #0b3c32;
+}
+
+.external_wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.registration {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: fit-content;
+	width: fit-content;
+}
+
+
+.registration_logo {
+	width: 224px;
+	height: 124px;
+}
+
+.form_field {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form_field input {
+	width: 232px;
+	height: 36px;
+	border-radius: 12px;
+	background: rgb(255, 255, 255);
+	color: rgb(141, 141, 141);
+	font-family: Ubuntu;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0%;
+	text-align: left;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+}
+
+
+.btn {
+	width: 140px;
+	height: 28px;
+	border-radius: 12px;
+	background: rgb(234, 204, 118);
+	color: rgb(11, 60, 50);
+	font-family: Ubuntu;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px;
+	letter-spacing: 0%;
+	text-align: center;
+}
+
+.line {
+    background-color: #ffffff;
+    height: 1px;
+    width: 242px;
+    position: relative;
+    top: 1vh;
+}
+
+
+.login {
+    position: relative;
+    text-align: center;
+    top: 1.3vh;
+}
+
+.login p {
+    color: #FFF;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login a {
+    color: #EACC76;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.no_number_error {
+    background-color: white;
+    border-radius: 18px;
+    width: 184px;
+    height: 52px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.no_number_error span {
+    color: #0B3C32;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.line {
+	display: flex;
+	justify-content: center;
+}
