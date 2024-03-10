@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   .then(response => response.json())
   .then(data => {
     console.log(data.user);
+    localStorage.setItem("user", JSON.stringify(data.user));
     var name = document.getElementById("name");
     var inn = document.getElementById("inn");
     name.innerHTML = data.user.first_name + " " + data.user.last_name;
