@@ -1,25 +1,3 @@
-window.addEventListener('resize', function () {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-
-    var container = document.getElementById("container");
-
-    var coef = 0;
-    coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-
-    container.style.transform = "scale(" + coef + ")";
-});
-
-var w = window.innerWidth;
-var h = window.innerHeight;
-
-var container = document.getElementById("container");
-
-var coef = 0;
-coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-
-container.style.transform = "scale(" + coef + ")";
-
 var button_pay_cash = document.getElementById("pay_cash");
 var button_pay_cashless = document.getElementById("pay_cashless");
 var input_card_info = document.getElementById("input_card_info");
@@ -78,63 +56,7 @@ dropdown.addEventListener('mouseleave', function () {
 });
 
 
-// var form =
 
-// form.addEventListener("submit", function (event) {
-//     event.preventDefault(); // Prevent the default form submission behavior
-
-//     // Gather all field values
-//     var paymentSumm = document.querySelector(".input_price").value;
-//     var medicalReportsFile = document.getElementById("medical_reports").files[0];
-//     var kkmCheckFile = document.getElementById("kkm_check").files[0];
-//     var invoiceFile = document.getElementById("invoice").files[0];
-//     var analysisFile = document.getElementById("analysis").files[0];
-//     var comment = document.querySelector(".input_comment").value;
-//     var paymentOption = document.querySelector(".dropbtn").textContent;
-//     var cardInfo = document.getElementById("input_card_info").value;
-
-//     // Create a FormData object to send files and other form data
-//     var jsonData = {
-//         paymentSumm: paymentSumm,
-//         opinions_on_medications: medicalReportsFile,
-//         kkmCheck: kkmCheckFile,
-//         invoice: invoiceFile,
-//         referral: analysisFile,
-//         // comment: comment,
-//         card_number: cardInfo,
-//         card_payment: card_payment_boolean,
-//         cash_payment: cash_payment_boolean
-//     };
-
-
-//     console.log(jsonData);
-//     // Send the form data to the specified URL using fetch
-//     fetch("http://212.112.103.137:6457/api/payment/add/", {
-//         method: "POST",
-//         headers: {
-//             "Authorization": "Bearer " + localStorage.getItem("accessToken"),
-//             "Content-Type": "multipart/form-data"
-//         },
-//         // body: JSON.stringify(jsonData)
-//         body: jsonData
-//     })
-//         .then(response => {
-//             if (response.ok) {
-//                 // Handle successful response
-//                 console.log("Form submitted successfully!");
-//                 // You can redirect or show a success message here
-//             } else {
-//                 // Handle error response
-//                 console.error("Form submission failed!");
-//                 console.error(response);
-//                 // You can handle errors or show an error message here
-//             }
-//         })
-//         .catch(error => {
-//             console.error("Error:", error);
-//             // Handle network errors
-//         });
-// });
 
 
 

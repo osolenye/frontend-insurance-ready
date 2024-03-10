@@ -1,26 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    window.addEventListener('resize', function () {
-        var registration = document.getElementById("registration");
-        var w = window.innerWidth;
-        var h = window.innerHeight;
-
-        var container = document.getElementById("container");
-        var coef = 0;
-        coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-
-        registration.style.transform = ("scale(" + coef + ")");
-    });
-
-    var registration = document.getElementById("registration");
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-
-    var container = document.getElementById("container");
-    var coef = 0;
-    coef = (h / container.offsetHeight + w / container.offsetWidth) / 2;
-
-    registration.style.transform = ("scale(" + coef + ")");
+    
     var noNumberError = document.getElementById("no_number_error");
     noNumberError.style.display = "none";
 

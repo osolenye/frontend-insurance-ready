@@ -118,5 +118,17 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-
+    .container {
+        width: auto;
+        height: auto;
+    }
+    .login_logo {
+        width: 224px;
+        height: 124px;
+    }
+    .form_field input {
+        width: 232px;
+        height: 36px;
+    }
 }
+

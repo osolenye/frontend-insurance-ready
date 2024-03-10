@@ -16,33 +16,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     client_inn_element.innerHTML = user.inn;
     client_fam_member_fio_element.innerHTML = user.fam_member1_fullname + " fam 1";
     client_fam_member_fio2_element.innerHTML = user.fam_member2_fullname + " fam 2";
-    // policy_element.innerHTML = "policy";
-    // service_element.innerHTML = "service";
-    // insurance_element.innerHTML = "insurance";
-    // cost_element.innerHTML = "cost";
-    // comment_element.innerHTML = "nigger";
-});
-window.addEventListener('resize', function () {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-
-    var wrapper = document.getElementById("wrapper");
-
-    var coef = 0;
-    coef = (h / wrapper.offsetHeight + w / wrapper.offsetWidth) / 2;
-
-    wrapper.style.transform = "scale(" + coef + ")";
 });
 
-var w = window.innerWidth;
-var h = window.innerHeight;
-
-var wrapper = document.getElementById("wrapper");
-
-var coef = 0;
-coef = (h / wrapper.offsetHeight + w / wrapper.offsetWidth) / 2;
-
-wrapper.style.transform = "scale(" + coef + ")";
 
 var token = localStorage.getItem("accessToken");
 var id = localStorage.getItem("id");
@@ -59,11 +34,7 @@ fetch('http://212.112.103.137:6457/api/payment/' + id, {
     return response.json();
 })
 .then(data => {
-        // console.log(data);
-        //     document.getElementById("medications").href = data.opinions_on_medications;
-        //     document.getElementById("kkm_check").href = data.kkmCheck;
-        //     document.getElementById("invoice").href = data.invoice;
-        //     document.getElementById("refferal").href = data.refferal;
+        
     if (data !== null) {
         var policy_element = document.getElementById("policy");
         var service_element = document.getElementById("service");
