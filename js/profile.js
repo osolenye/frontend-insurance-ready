@@ -255,6 +255,7 @@ update_policy.addEventListener("click", function (event) {
   });
 });
 
+var pop_up = false;
 my_limits.addEventListener("click", function (event) {
   event.preventDefault();
   fetch("http://212.112.103.137:6457/api/limits/", {
@@ -306,6 +307,7 @@ my_limits.addEventListener("click", function (event) {
   var container_limits = document.querySelector(".container_limits");
   container_limits.style.display = "flex";
   container_limits.style.position = "fixed";
+  pop_up = true;
 
   var limits = JSON.parse(localStorage.getItem("limits"));
   var sublimits = JSON.parse(localStorage.getItem("sublimits"));
@@ -330,8 +332,13 @@ my_limits.addEventListener("click", function (event) {
 
 });
 
-
-
+document.addEventListener("keydown", function() {
+  if (pop_up) {
+    pop_up = false;
+    var container_limits = document.querySelector(".container_limits");
+    container_limits.style.display = "none";
+  }
+});
 });
 
 
