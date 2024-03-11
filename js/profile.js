@@ -2,6 +2,9 @@ var responseUnprocessedContent = [];
 var responseProcessedContent = [];
 
 const accessToken = localStorage.getItem("accessToken");
+if (accessToken == null) {
+  window.location.href = "/login2/";
+}
 console.log(accessToken);
 
 // fetch("http://212.112.103.137:6457/api/profile/", {
@@ -13,6 +16,7 @@ fetch("https://api.dms.insurance.kg:6458/api/profile/", {
 })
 .then(response => response.json())
 .then(data => {
+
   console.log(data.user);
   localStorage.setItem("user", JSON.stringify(data.user));
   var name = document.getElementById("name");
