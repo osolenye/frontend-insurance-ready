@@ -8,7 +8,7 @@
     justify-content: center;
     /* align-items: center; */
     width: 100vw;
-/*    height: 70vh;*/
+    /*    height: 70vh;*/
 }
 
 .payment_header {
@@ -27,11 +27,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* top: 50px; */
     flex-direction: column;
     width: 1360px;
     height: 656px;
-    top: 10%;
 }
 
 .block {
@@ -90,7 +88,7 @@
     height: 36px;
 
     border-radius: 6px;
-    
+
     display: flex;
     align-items: center;
 }
@@ -329,4 +327,32 @@
 
 .form_patient_search {
     margin-bottom: 8px;
+}
+
+
+.error {
+    width: 184px;
+    height: 52px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(11, 60, 50);
+    background: rgb(11, 60, 50);
+    position: absolute;
+    right: 100px;
+    top: 537px;
+}
+
+
+.error span {
+    color: white;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: center;
 }

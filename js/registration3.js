@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(jsonData);
 
         // fetch("http://212.112.103.137:6457/api/register/", {
-        fetch("https://api.dms.insurance.kg:6458/api/register", {
+        fetch("https://api.dms.insurance.kg:6458/api/register/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

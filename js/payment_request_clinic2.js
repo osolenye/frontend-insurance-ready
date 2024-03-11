@@ -1,6 +1,8 @@
 var search_by_inn = document.getElementById("search_by_id");
 document.addEventListener("DOMContentLoaded", function () {
     var inputField = document.querySelector(".input_patient_name");
+    const error = document.querySelector(".error");
+    error.style.display = "none";
 
     inputField.addEventListener("input", function () {
         // Получаем значение поля ввода
@@ -77,11 +79,15 @@ form.addEventListener("submit", function (event) {
                 // Handle successful response
             console.log("Form submitted successfully!");
                 // You can redirect or show a success message here
+            window.location.href = "/profile/";
         } else {
                 // Handle error response
             console.error("Form submission failed!");
             console.error(response);
                 // You can handle errors or show an error message here
+                const error = document.querySelector(".error");
+                fadeInOut(error);
+            
         }
     })
     .catch(error => {
@@ -91,3 +97,30 @@ form.addEventListener("submit", function (event) {
 });
 
 
+function fadeInOut(element) {
+    // Плавное появление элемента
+    element.style.opacity = 0;
+    element.style.display = "block";
+    let opacity = 0;
+    const fadeInInterval = setInterval(() => {
+        if (opacity < 1) {
+            opacity += 0.1;
+            element.style.opacity = opacity;
+        } else {
+            clearInterval(fadeInInterval);
+            // Через 5 секунд начинаем затухание
+            setTimeout(() => {
+                let opacity = 1;
+                const fadeOutInterval = setInterval(() => {
+                    if (opacity > 0) {
+                        opacity -= 0.1;
+                        element.style.opacity = opacity;
+                    } else {
+                        clearInterval(fadeOutInterval);
+                        element.style.display = "none";
+                    }
+                }, 100);
+            }, 5000);
+        }
+    }, 100);
+}
