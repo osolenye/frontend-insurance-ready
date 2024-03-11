@@ -2,7 +2,8 @@ var services = [];
 
 
 
-var url = "http://212.112.103.137:6457/api/get_services/";
+// var url = "http://212.112.103.137:6457/api/get_services/";
+var url = "https://api.dms.insurance.kg:6458/api/get_services/";
 var services;
 
 fetch(url)

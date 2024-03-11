@@ -4,7 +4,8 @@ var responseProcessedContent = [];
 const accessToken = localStorage.getItem("accessToken");
 console.log(accessToken);
 
-fetch("http://212.112.103.137:6457/api/profile/", {
+// fetch("http://212.112.103.137:6457/api/profile/", {
+fetch("https://api.dms.insurance.kg:6458/api/profile/", {
   method: "GET",
   headers: {
     "Authorization": `Bearer ${accessToken}`
@@ -23,7 +24,8 @@ fetch("http://212.112.103.137:6457/api/profile/", {
   console.error("Error:", error);
 });
 
-fetch("http://212.112.103.137:6457/api/my_payments/", {
+// fetch("http://212.112.103.137:6457/api/my_payments/", {
+fetch("https://api.dms.insurance.kg:6458/api/my_payments/", {
   method: "GET",
   headers: {
     "Authorization": `Bearer ${accessToken}`
@@ -210,7 +212,8 @@ var my_limits = document.getElementById("my_limits");
 
 update_policy.addEventListener("click", function (event) {
   event.preventDefault();
-  fetch("http://212.112.103.137:6457/api/update/", {
+  // fetch("http://212.112.103.137:6457/api/update/", {
+  fetch("https://api.dms.insurance.kg:6458/api/update/", {
     method: 'GET',
     headers: {
       'Authorization': "Bearer " + localStorage.getItem("accessToken")
@@ -237,7 +240,8 @@ update_policy.addEventListener("click", function (event) {
 var pop_up = false;
 my_limits.addEventListener("click", function (event) {
   event.preventDefault();
-  fetch("http://212.112.103.137:6457/api/limits/", {
+  // fetch("http://212.112.103.137:6457/api/limits/", {
+  fetch("https://api.dms.insurance.kg:6458/api/limits", {
     method: 'GET',
     headers: {
       'Authorization': "Bearer " + localStorage.getItem("accessToken")
@@ -259,7 +263,8 @@ my_limits.addEventListener("click", function (event) {
   .catch(error => {
     console.error('There was a problem with your fetch operation:', error);
   });
-  fetch("http://212.112.103.137:6457/api/sublimits/", {
+  // fetch("http://212.112.103.137:6457/api/sublimits/", {
+  fetch("https://api.dms.insurance.kg:6458/api/sublimits/", {
     method: 'GET',
     headers: {
       'Authorization': "Bearer " + localStorage.getItem("accessToken")

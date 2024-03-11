@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var jsonData = JSON.stringify(formData);
 
-        fetch("http://212.112.103.137:6457/api/token/", {
+        // fetch("http://212.112.103.137:6457/api/token/", {
+        fetch("https://api.dms.insurance.kg:6458/api/token/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="navbar_mobile">
+            <div class="mobile_button">
+                <a href="">
+                    <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                            Created with Pixso.
+                        </desc>
+                        <defs>
+                            <clipPath id="clip576_2">
+                                <rect id="iconamoon:menu-burger-horizontal-bold" width="24.000000" height="24.000000"
+                                    fill="white" fill-opacity="0" />
+                            </clipPath>
+                        </defs>
+                        <rect id="iconamoon:menu-burger-horizontal-bold" width="24.000000" height="24.000000"
+                            fill="#FFFFFF" fill-opacity="0" />
+                        <g clip-path="url(#clip576_2)">
+                            <path id="Vector" d="M3 6L21 6M3 12L21 12M3 18L21 18" stroke="#EACC76"
+                                stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/logo.jpg" alt="logo" />
+            </div>
+            <ul class="navbar_buttons">
+                <li class="navbar_button">
+                    <a href="dms_rules.html">О ДМС</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="joined_clinics.html">Клининки</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="profile.html">Профиль</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="external_container">
+        <div class="container" id="container">
+            <div class="wrapper" id="wrapper">
+                <div class="fill_request">
+                    <span class="name" id="name">nigger</span>
+                    <span class="inn" id="inn">nigger</span>
+                </div>
+
+                <a href="" class="button_dropdown_open_link">
+                    <div class="button_dropdown_open">
+                        <svg width="28.000000" height="30.000000" viewBox="0 0 28 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs />
+                            <path id="Subtract"
+                                d="M0 10L0 20C0 25.5228 4.47717 30 10 30L18 30C23.5228 30 28 25.5228 28 20L28 0C28 5.52283 23.5228 10 18 10L0 10Z"
+                                clip-rule="evenodd" fill="#0B3C32" fill-opacity="1.000000" fill-rule="evenodd" />
+                            <path id="Vector 1" d="M11 17L15 21L19 17" stroke="#EACC76" stroke-opacity="1.000000"
+                                stroke-width="2.000000" />
+                        </svg>
+
+                    </div>
+                </a>
+
+                .dropdown_content_ 
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/mobile.js"></script>
+</body>
+
+</html>
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar_mobile {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(11, 60, 50);
+    display: flex;
+    align-items: center;
+}
+
+.navbar_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+
+.mobile_button a {
+    text-decoration: none;
+}
+
+.navbar {
+    height: 100vh;
+    width: 120px;
+    flex-shrink: 0;
+    background: #0B3C32;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.logo img {
+    display: none;
+}
+
+.navbar_buttons {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_button {
+    display: inline-block;
+    line-height: 92px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.navbar_button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #EACC76;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.external_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.container {
+    position: relative;
+    width: 360px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fill_request {
+    width: 328px;
+    height: 80px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 10px;
+
+    background: rgb(255, 255, 255);
+}
+
+
+.name {
+    display: block;
+    color: #0b3c32;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.inn {
+    display: block;
+    color: #0b3c32;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.button_dropdown_open_link {
+    position: relative;
+    top: 70px;
+    right: 28px;
+    height: 0;
+    width: 0;
+}

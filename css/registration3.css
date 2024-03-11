@@ -267,6 +267,7 @@ body {
         text-align: center;
         position: relative;
         top: 50px;
+        left: 0px;
         display: flex;
         align-items: center;
     }

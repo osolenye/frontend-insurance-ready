@@ -19,7 +19,8 @@ accepted_button.addEventListener("click", function (event) {
 
 var token = localStorage.getItem("accessToken");
 var id = localStorage.getItem("id");
-fetch('http://212.112.103.137:6457/api/payment/' + id, {
+// fetch('http://212.112.103.137:6457/api/payment/' + id, {
+fetch('https://api.dms.insurance.kg:6458/api/payment/' + id, {
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${token}`

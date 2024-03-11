@@ -101,7 +101,8 @@ form.addEventListener("submit", function (event) {
     }
 
     // Send the form data to the specified URL using fetch
-    fetch("http://212.112.103.137:6457/api/payment/add/", {
+    // fetch("http://212.112.103.137:6457/api/payment/add/", {
+    fetch("https://api.dms.insurance.kg:6458/api/payment/add", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("accessToken"),

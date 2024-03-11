@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sublimitsUrl = 'http://212.112.103.137:6457/api/sublimits/';
-    const limitsUrl = 'http://212.112.103.137:6457/api/limits/';
+    // const limitsUrl = 'http://212.112.103.137:6457/api/limits/';
+    const limitsUrl = 'https://api.dms.insurance.kg:6458/api/limits/';
 
     const token = localStorage.getItem("accessToken"); // Замените YOUR_AUTH_TOKEN на ваш токен авторизации
 

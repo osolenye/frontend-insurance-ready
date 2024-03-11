@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         const jsonData = JSON.stringify(formData);
-        console.log(typeof jsonData);
+        console.log(jsonData);
 
-        fetch("http://212.112.103.137:6457/api/register/", {
+        // fetch("http://212.112.103.137:6457/api/register/", {
+        fetch("https://api.dms.insurance.kg:6458/api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
