@@ -103,13 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("card_number", document.getElementById("input_card_info").value);
         formData.append("card_payment", card_payment_boolean);
         formData.append("cash_payment", cash_payment_boolean);
-        for (var pair of formData.entries()) {
-            console.log(pair[0] + ', ' + pair[1]);
-        }
 
         // Send the form data to the specified URL using fetch
         // fetch("http://212.112.103.137:6457/api/payment/add/", {
-        fetch("https://api.dms.insurance.kg:6458/api/payment/add", {
+        fetch("https://api.dms.insurance.kg:6458/api/payment/add/", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("accessToken"),
@@ -120,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
                 if (response.ok) {
                     // Handle successful response
-                    console.log("Form submitted successfully!");
+                    // console.log("Form submitted successfully!");
                     // You can redirect or show a success message here
                     window.location.href = "/profile/"
                 } else {

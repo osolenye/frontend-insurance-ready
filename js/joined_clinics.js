@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const token = localStorage.getItem("accessToken"); // замените на ваш реальный токен
 
     // fetch('http://212.112.103.137:6457/api/clinics/', {
-    fetch('https://api.dms.insurance.kg:6458/api/clinis', {
+    fetch('https://api.dms.insurance.kg:6458/api/clinis/', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(data => {
-            console.log(data); // обработка полученных данных
+            // console.log(data); // обработка полученных данных
             var wrapper = document.querySelector(".wrapper");
             for (var i = 0; i < data.length; i++) {
                 if (i % 2 == 0) {

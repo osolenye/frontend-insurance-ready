@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     var user = (JSON.parse(localStorage.getItem("user")));
-    console.log(user);
+    // console.log(user);
 
     var client_fio_element = document.getElementById("client_fio");
     var client_inn_element = document.getElementById("client_inn");
@@ -42,7 +42,7 @@ fetch('https://api.dms.insurance.kg:6458/api/payment' + id, {
         var insurance_element = document.getElementById("insurance");
         var cost_element = document.getElementById("cost");
         var comment_element = document.getElementById("comment");
-        console.log(data);
+        // console.log(data);
         policy_element.innerHTML = data.policy + " policy";
         service_element.innerHTML = data.service + " service";
         insurance_element.innerHTML = data.insurance + " insurance";
@@ -64,7 +64,8 @@ fetch('https://api.dms.insurance.kg:6458/api/payment' + id, {
 
     function addPortToUrl(url) {
         if (url) {
-            url = url.replace("http://212.112.103.137/", "http://212.112.103.137:6457/");
+            // url = url.replace("http://212.112.103.137/", "http://212.112.103.137:6457/");
+                url = url.replace("https://api.dms.insurance.kg/", "https://api.dms.insurance.kg:6458/");
         } else {
             url = "";
         }

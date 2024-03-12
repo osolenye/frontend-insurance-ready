@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 // console.log(data); // Здесь вы можете обрабатывать полученные данные
                 localStorage.setItem("accessToken", data.access);
-                console.log(localStorage.getItem("accessToken"));
+                // console.log(localStorage.getItem("accessToken"));
                 window.location.href = "profile.html";
             })
             .catch(error => {

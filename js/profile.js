@@ -17,7 +17,7 @@ fetch("https://api.dms.insurance.kg:6458/api/profile/", {
 .then(response => response.json())
 .then(data => {
 
-  console.log(data.user);
+  // console.log(data.user);
   localStorage.setItem("user", JSON.stringify(data.user));
   var name = document.getElementById("name");
   var inn = document.getElementById("inn");
@@ -40,7 +40,7 @@ fetch("https://api.dms.insurance.kg:6458/api/my_payments/", {
   var payments = data;
   var responsesContainer = document.querySelector(".responses");
 
-  console.log(payments);
+  // console.log(payments);
       // Проходимся по каждому элементу в массиве данных
   payments.forEach(function (request) {
     if (request.processed == true) {
@@ -123,7 +123,7 @@ fetch("https://api.dms.insurance.kg:6458/api/my_payments/", {
         event.preventDefault();
 
         localStorage.setItem("id", request.id);
-        window.location.href = "request_processing.html"
+        window.location.href = "request_processing.html";
       });
 
           // Добавляем элемент response_unprocessed в контейнер responsesContainer
@@ -234,7 +234,7 @@ update_policy.addEventListener("click", function (event) {
   .then(data => {
     dropdownContent.style.display = "none";
     buttonDropdownOpenLink.style.display = "block";
-        console.log(data); // Обрабатываем полученные данные
+        // console.log(data); // Обрабатываем полученные данные
       })
   .catch(error => {
     console.error('There was a problem with your fetch operation:', error);
@@ -245,7 +245,7 @@ var pop_up = false;
 my_limits.addEventListener("click", function (event) {
   event.preventDefault();
   // fetch("http://212.112.103.137:6457/api/limits/", {
-  fetch("https://api.dms.insurance.kg:6458/api/limits", {
+  fetch("https://api.dms.insurance.kg:6458/api/limits/", {
     method: 'GET',
     headers: {
       'Authorization': "Bearer " + localStorage.getItem("accessToken")

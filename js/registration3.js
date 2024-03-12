@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         const jsonData = JSON.stringify(formData);
-        console.log(jsonData);
+        // console.log(jsonData);
 
         // fetch("http://212.112.103.137:6457/api/register/", {
         fetch("https://api.dms.insurance.kg:6458/api/register/", {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             body: jsonData,
         })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 if (!response.ok) {
                     //   console.log(response.json());
                     throw new Error("Network response is not ok");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             })
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 // fetch("http://212.112.103.137:6457/api/token/", {
                 fetch("https://api.dms.insurance.kg:6458/api/token/", {
                     method: "POST",
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     .then(data => {
                         // console.log(data); // Здесь вы можете обрабатывать полученные данные
                         localStorage.setItem("accessToken", data.access);
-                        console.log(localStorage.getItem("accessToken"));
+                        // console.log(localStorage.getItem("accessToken"));
                         window.location.href = "profile.html";
                     })
                     .catch(error => {

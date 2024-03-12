@@ -173,7 +173,8 @@
     background: rgb(255, 255, 255);
 
     display: flex;
-    align-items: center;
+    overflow-y: scroll;
+    flex-direction: column;
 }
 
 .patient_inn span {
@@ -232,4 +233,39 @@
 
 a {
     text-decoration: none;
+}
+
+
+.service_checkbox_wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.service_checked {
+    position: absolute;
+    margin-left: 3px;
+}
+
+.service {
+    display: flex;
+}
+
+.service_id_hidden {
+    display: hidden;
+}
+.service_checked {
+    visibility: hidden;
+}
+
+.checked {
+    visibility: hidden;
+}
+
+#finalSumm_container {
+    justify-content: start;
+}
+
+.service_id_hidden {
+    visibility: hidden;
 }
