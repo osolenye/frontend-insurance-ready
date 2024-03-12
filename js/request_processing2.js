@@ -21,6 +21,7 @@ accepted_button.addEventListener("click", function (event) {
 
 var token = localStorage.getItem("accessToken");
 var id = localStorage.getItem("id");
+//люблююю
 // fetch('http://212.112.103.137:6457/api/payment/' + id, {
 fetch('https://api.dms.insurance.kg:6458/api/payment/' + id, {
     method: 'GET',
@@ -70,9 +71,28 @@ fetch('https://api.dms.insurance.kg:6458/api/payment/' + id, {
         console.log("error", error);
     })
 var form_patient_search = document.querySelector(".form_patient_search");
+form_patient_search.addEventListener("input", function(event) {
+    event.preventDefault();
+
+    var inputValue = document.querySelector(".input_patient_name").value;
+    var service = document.querySelectorAll(".service");
+    if (inputValue.length == 0) {
+        service.forEach(function (service) {
+            service.style.display = "flex";
+        });
+    } else {
+        service.forEach(function (service) {
+            if (service.querySelector(".service_name").textContent.toLowerCase().includes(inputValue.toLowerCase())) {
+                service.style.display = "flex";
+            } else {
+                service.style.display = "none";
+            }
+        });
+    }
+});
 form_patient_search.addEventListener("submit", function(event) {
     event.preventDefault();
-});
+})
 
 fetch('https://api.dms.insurance.kg:6458/api/get_services/', {
     method: 'GET',
@@ -257,3 +277,4 @@ process.addEventListener("submit", function (event) {
             console.error("There is a problem with the fetch operation", error);
         });
 });
+
