@@ -47,6 +47,7 @@ form.addEventListener("submit", function (event) {
     var kkmCheck = document.getElementById('kkm_check').files[0];
     var invoice = document.getElementById('invoice').files[0];
     var analysis = document.getElementById('analysis').files[0];
+    var comment = document.getElementById("comment");
     // Gather all field values
     formData.append("paymentSumm", document.querySelector(".input_price").value);
     // Append the files to the FormData object
@@ -63,6 +64,7 @@ form.addEventListener("submit", function (event) {
         formData.append('referral', analysis);
     }
     formData.append("user", JSON.parse(localStorage.getItem("userId")).id);
+    formData.append("comment", comment);
 
 
     // Send the form data to the specified URL using fetch

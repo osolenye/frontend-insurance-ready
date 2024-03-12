@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var kkmCheck = document.getElementById('kkm_check').files[0];
         var invoice = document.getElementById('invoice').files[0];
         var analysis = document.getElementById('analysis').files[0];
+        var comment = document.getElementById("comment").value;
         // Append the files to the FormData object
         if (medicalReports) {
             formData.append('opinions_on_medications', medicalReports);
@@ -103,6 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("card_number", document.getElementById("input_card_info").value);
         formData.append("card_payment", card_payment_boolean);
         formData.append("cash_payment", cash_payment_boolean);
+        formData.append("comment", comment);
+
 
         // Send the form data to the specified URL using fetch
         // fetch("http://212.112.103.137:6457/api/payment/add/", {
